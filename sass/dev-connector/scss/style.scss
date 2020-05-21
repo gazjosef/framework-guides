@@ -18,3 +18,18 @@ a {
   text-decoration: none;
   color: $primary-color;
 }
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+// NAVBAR
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
