@@ -16,7 +16,7 @@ body {
 
 a {
   text-decoration: none;
-  color: $primary-color;
+  color: #17a2b8;
 }
 
 ul {
@@ -32,4 +32,11 @@ img {
 .navbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2rem;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid $primary-color;
 }
