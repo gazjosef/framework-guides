@@ -5,7 +5,8 @@
   }
 
   &-light {
-    @include set-background($light-color)
+    @include set-background($light-color);
+    border: #ccc 1px solid;
   }
 
   &-dark {
@@ -21,6 +22,7 @@
   }
 
   &-white {
-    @include set-background(#fff)
+    @include set-background(#fff);
+    border: #ccc 1px solid;
   }
 }
