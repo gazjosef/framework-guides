@@ -12,7 +12,7 @@ $max-width: 1100px;
   }
 
   @else {
-    @return #fff
+    @return #fff;
   }
 }
 
