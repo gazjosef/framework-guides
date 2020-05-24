@@ -114,11 +114,23 @@ img {
     .icons a {
       color: #fff;
       margin: 0 0.3rem;
+
+      &:hover {
+        color: $dark-color;
+      }
     }
   }
 
   .profile-about {
     grid-area: about;
+    text-align: center;
+
+    .skills {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   .profile-exp {
