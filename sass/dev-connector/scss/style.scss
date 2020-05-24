@@ -141,6 +141,17 @@ img {
     grid-area: edu;
   }
 
+  .profile-exp>div,
+  .profile-edu>div {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dotted #ccc;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
   .profile-github {
     grid-area: github;
   }
