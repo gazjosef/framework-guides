@@ -141,18 +141,38 @@ img {
     grid-area: edu;
   }
 
-  .profile-exp>div,
-  .profile-edu>div {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px dotted #ccc;
+  .profile-exp,
+  .profile-edu {
+    &>div {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px dotted #ccc;
 
-    &:last-child {
-      border: none;
+      &:last-child {
+        border: none;
+      }
+    }
+
+    p {
+      margin: 0.5rem 0;
     }
   }
 
   .profile-github {
     grid-area: github;
+
+    .repo {
+      display: flex;
+
+      &>div:first-child {
+        flex: 7;
+        flex-basis: 70%;
+      }
+
+      &>div:last-child {
+        flex: 3;
+        flex-basis: 20%;
+      }
+    }
   }
 }
