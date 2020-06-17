@@ -105,11 +105,16 @@ function errorHandling() {
     .get('https://jsonplaceholder.typicode.com/todoss')
     .then((res) => showOutput(res))
     .catch((err) => {
-      if (error.response) {
+      if (err.response) {
         // Server responded with a status other then 200 range
         console.log(err.response.data);
         console.log(err.response.status);
         console.log(err.response.headers);
+      } else if (err.request) {
+        // Request was made but no response
+        console.error(err.request);
+      } else {
+        console.error(err.message);
       }
     });
 }
