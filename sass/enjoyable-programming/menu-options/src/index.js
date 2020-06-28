@@ -3,4 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 
-ReactDOM.render(<div>Hello</div>, document.getElementById('root'));
+import ContainerComponent from './Components/Container/Container';
+
+ReactDOM.render(
+  <ContainerComponent>Hello</ContainerComponent>,
+  document.getElementById('root')
+);
