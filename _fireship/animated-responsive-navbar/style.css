@@ -83,10 +83,6 @@ main {
   margin: 0 1.5rem;
 }
 
-/* .navbar:hover {
-  width: 16rem;
-} */
-
 .navbar:hover .link-text {
   display: block;
 }
@@ -172,6 +168,14 @@ main {
 
   .navbar:hover .link-text {
     display: inline;
-    transition: opacity var(--transition-speed);
+    /* transition: opacity var(--transition-speed); */
+  }
+
+  .navbar:hover .logo svg {
+    margin-left: 11rem;
+  }
+
+  .navbar:hover .logo-text {
+    left: 0px;
   }
 }
