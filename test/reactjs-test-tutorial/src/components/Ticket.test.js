@@ -9,10 +9,15 @@ it('should increment total when clicking button', () => {
   expect(total1).toBe('0');
 
   const button = wrapper.find('button');
-
   button.simulate('click');
-
   const total2 = wrapper.find('h2.total').text();
 
   expect(total2).toBe('1');
+});
+
+it('should render ticket name in title', () => {
+  const wrapper = shallow(<Ticket name={'NHL Tickets'} />);
+  const title = wrapper.find('h2.title').text();
+
+  expect(title).toBe('NHL Tickets');
 });
