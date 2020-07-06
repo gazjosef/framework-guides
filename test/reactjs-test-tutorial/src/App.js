@@ -1,8 +1,6 @@
 import React from 'react';
 import { Ticket } from './components/Ticket';
 import { Footer } from './components/Footer';
-// import { Footer } from './components/Footer';
-import './App.css';
 
 function App() {
   return (
