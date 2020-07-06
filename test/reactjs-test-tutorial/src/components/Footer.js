@@ -1,5 +1,5 @@
 import React from 'react';
 
-export const Footers = () => {
-  return <div>Footer</div>;
+export const Footer = () => {
+  return <div>FOOTER</div>;
 };
