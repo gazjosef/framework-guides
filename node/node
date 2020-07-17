@@ -1,0 +1,6 @@
+What is Node.Js?
+
+- JavaScript Runtime (Not a Language or a Framework)
+- Built on the V8 JavaScript Engine
+
+Essentially allows us to run JavaScript on the Server
