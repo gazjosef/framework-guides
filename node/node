@@ -4,3 +4,11 @@ What is Node.Js?
 - Built on the V8 JavaScript Engine
 
 Essentially allows us to run JavaScript on the Server
+
+
+Why Use Node?
+
+- Fast, efficient and highly scalable
+- Event driven, non-blocking I/O model
+- Popular in the industry
+- Same Language on the front and back end
