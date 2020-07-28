@@ -37,7 +37,12 @@ export default function Job({ job }) {
           />
         </div>
         <Card.Text>
-          <Button varient="primary">View Details</Button>
+          <Button
+            onClick={() => setOpen((prevOpen) => !prevOpen)}
+            varient="primary"
+          >
+            View Details
+          </Button>
         </Card.Text>
         <Collapse in={open}>
           <div className="mt-4">
