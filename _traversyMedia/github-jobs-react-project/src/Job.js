@@ -6,7 +6,7 @@ export default function Job({ job }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <Card>
+    <Card className="mb-3">
       <Card.Body>
         <div className="d-flex justify-content-between">
           <div>
@@ -41,7 +41,7 @@ export default function Job({ job }) {
             onClick={() => setOpen((prevOpen) => !prevOpen)}
             varient="primary"
           >
-            View Details
+            {open ? 'Hide Details' : 'View Details'}
           </Button>
         </Card.Text>
         <Collapse in={open}>
