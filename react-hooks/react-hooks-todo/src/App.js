@@ -8,6 +8,13 @@ function Todo({ todo, index }) {
 function TodoForm({ addToDo }) {
   const [value, setValue] = useState('');
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!value) return;
+    addToDo(value);
+    setValue('');
+  };
+
   return (
     <form onSubmit={handleSubmit}>
       <input
