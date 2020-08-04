@@ -5,6 +5,21 @@ function Todo({ todo, index }) {
   return <div className="todo">{todo.text}</div>;
 }
 
+function TodoForm({ addToDo }) {
+  const [value, setValue] = useState('');
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        className="input"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
+    </form>
+  );
+}
+
 function App() {
   const [todos, setTodos] = useState([
     {
