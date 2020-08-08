@@ -1,0 +1,25 @@
+Clean Code
+
+Table of Contents
+1. Introduction
+2. Variables
+3. Functions
+4. Objects and Data Structures
+5. Classes
+6. SOLID
+7. Testing
+8. Concurrency
+9. Error Handling
+10. Formatting
+11. Comments
+12. Translations
+
+
+1. Introduction
+
+- Readable, Reusable, and Refactorable.
+
+2. Variables
+
+- Use meaningful variable names
+- Use pronouncable variable names
