@@ -22,6 +22,10 @@ p {
   margin: 0;
 }
 
+section {
+  padding: 7em 0;
+}
+
 .container {
   width: 85%;
   max-width: 65em;
@@ -58,7 +62,12 @@ p {
   text-transform: uppercase;
 }
 
-.section-title {}
+.section-title {
+  text-align: center;
+  font-size: clamp(2.5rem, calc(5vh + 1rem), 4rem);
+  line-height: 1;
+  color: #17353d;
+}
 
 .hero {
   color: white;
