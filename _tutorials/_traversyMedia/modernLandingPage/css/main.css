@@ -38,4 +38,11 @@ p {
   padding: .5em 1.25em;
   background: var(--clr-accent, blue);
   border-radius: .25em;
+  transition: transform 250ms ease-in-out, opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: .9;
 }
