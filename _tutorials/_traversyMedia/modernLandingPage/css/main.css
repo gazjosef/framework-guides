@@ -50,5 +50,22 @@ p {
 .primary-title {
   font-size: 4rem;
   font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
-  line-height: 1.1;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.section-title {}
+
+.hero {
+  color: #fff;
+  text-align: center;
+  padding: 15em 0;
+  background: #222;
+
+  @supports(background-blend-mode: multiply) {
+    background: url(../img/shoe-3.png), radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+  }
+
+  /* background-size: 10%; */
 }
