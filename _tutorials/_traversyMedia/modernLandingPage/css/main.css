@@ -32,6 +32,15 @@ section {
   margin: 0 auto;
 }
 
+.split {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.split>* {
+  flex-basis: 30%;
+}
+
 .spacing>*+* {
   margin-top: var(--spacer, 2rem);
 }
