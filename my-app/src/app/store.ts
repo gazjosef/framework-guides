@@ -5,6 +5,7 @@ import authorizationReducer from '../features/authorization/authorizationSlice';
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
+    authorization: authorizationReducer,
   },
 });
 
