@@ -85,6 +85,7 @@ section {
   font-size: clamp(2.5rem, calc(5vh + 1rem), 4rem);
   line-height: 1;
   color: #17353d;
+  margin-bottom: 5rem;
 }
 
 .hero {
@@ -102,4 +103,29 @@ section {
     background-repeat: no-repeat;
     background-position: center center;
   }
+}
+
+.featured {
+  background: #eee;
+}
+
+.featured__item {
+  display: block;
+  position: relative;
+  -webkit-transform: scale(0.85);
+  transform: scale(0.85);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.featured__item:hover,
+.featured__item:focus {
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
