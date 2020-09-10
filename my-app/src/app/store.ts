@@ -1,11 +1,13 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import counterReducer from '../features/counter/counterSlice';
 import authorizationReducer from '../features/authorization/authorizationSlice';
+// import spotifyExampleReducer from '../features/spotifyExample/';
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
     authorization: authorizationReducer,
+    spotifyExample: spotifyExampleReducer,
   },
 });
 
