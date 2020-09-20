@@ -3,3 +3,11 @@
 *::after {
   box-sizing: border-box;
 }
+
+:root {
+  --clr-dark: rgb(13, 17, 19);
+  --clr-light: #fff;
+  --clr-accent: rgb(222, 52, 0);
+  --clr-accent-dark: rgb(163, 38, 0);
+  --clr-secondary: rgb(0, 62, 163);
+}
