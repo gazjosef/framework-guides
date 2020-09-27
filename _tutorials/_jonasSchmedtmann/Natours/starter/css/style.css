@@ -81,7 +81,11 @@ body {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translate(-100px);
+    transform: translate(-100px) rotate(0deg);
+  }
+
+  60% {
+    transform: rotate(180deg);
   }
 
   80% {
