@@ -154,5 +154,9 @@ body {
 }
 
 .btn-white::after {
-  background-color: #ffffff;
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scale(2)
 }
