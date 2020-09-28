@@ -151,6 +151,7 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
+  transition: all .4s;
 }
 
 .btn-white::after {
@@ -158,5 +159,6 @@ body {
 }
 
 .btn:hover::after {
-  transform: scale(2)
+  transform: scale(1.5);
+  opacity: 0;
 }
