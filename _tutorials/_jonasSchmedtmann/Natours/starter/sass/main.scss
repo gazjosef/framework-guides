@@ -1,4 +1,13 @@
-@import "base/base.scss";
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "pages/home";
 
 $color-primary: #7ed56f; // Pastel Green
 $color-primary-light: #55c57a; // Emerald Green
