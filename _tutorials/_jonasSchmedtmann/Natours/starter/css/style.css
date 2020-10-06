@@ -113,6 +113,8 @@ body {
   max-width: 114rem;
   background-color: #eeeeee;
   margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
 
 .header {
   height: 95vh;
