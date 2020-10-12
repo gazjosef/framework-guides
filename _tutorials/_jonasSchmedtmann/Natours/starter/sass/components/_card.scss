@@ -3,12 +3,28 @@
   -moz-perspective: 150rem;
 
   &__side {
+    background-color: orangered;
+    color: #ffffff;
+    font-size: 2rem;
+    height: 50rem;
+    transition: all .8s;
+    
+    &--front {
       background-color: orangered;
-      height: 50rem;
-      transition: all .8s;
+      
+    }
+    
+    &--back {
+      background-color: green;
+      transform: rotateY(180deg);
+    }
   }
 
-  &:hover &__side {
+  &:hover &__side--front {
     transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
   }
 }
