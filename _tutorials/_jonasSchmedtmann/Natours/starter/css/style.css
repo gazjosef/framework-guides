@@ -211,9 +211,12 @@ body {
     color: #fff;
     position: absolute;
     top: 12rem;
-    right: 2rem; }
-  .card__heading-span--1 {
-    background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    right: 2rem;
+    width: 75%; }
+  .card__heading-span {
+    padding: 1rem; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
 
 .composition {
   position: relative; }
