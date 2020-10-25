@@ -31,6 +31,12 @@ body {
     display: table;
     clear: both; }
 
+.cardArea {
+  font-size: 20pt;
+  height: 8rem;
+  position: relative;
+  padding: 2rem; }
+
 .text-box {
   background-color: #ffffc0;
   border-color: #006000 #90f090 #90f090 #006000;
