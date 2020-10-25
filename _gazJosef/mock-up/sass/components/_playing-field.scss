@@ -6,4 +6,6 @@
   margin-bottom: 0.8rem;
   padding: 4px;
   text-align: left;
+
+  @include clearfix
 }

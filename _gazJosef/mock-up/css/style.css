@@ -26,6 +26,25 @@ body {
   margin-bottom: 0.8rem;
   padding: 4px;
   text-align: left; }
+  .playing-field::after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.text-box {
+  background-color: #ffffc0;
+  border-color: #006000 #90f090 #90f090 #006000;
+  border-style: solid;
+  border-width: 1px;
+  clear: right;
+  color: #000;
+  float: right;
+  font-size: 10pt;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  padding: 0.1rem;
+  text-align: center;
+  width: 12rem; }
 
 .row {
   max-width: 114rem;
