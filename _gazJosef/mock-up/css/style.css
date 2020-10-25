@@ -30,6 +30,15 @@ body {
   color: #000;
   padding: 3rem; }
 
+.playing-field {
+  border-color: #208020 #60c060 #60c060 #208020;
+  border-style: solid;
+  border-width: 1px;
+  color: #000000;
+  margin-bottom: 8px;
+  padding: 4px;
+  text-align: left; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
