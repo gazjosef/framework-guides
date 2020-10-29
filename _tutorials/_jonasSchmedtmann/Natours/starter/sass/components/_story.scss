@@ -5,5 +5,13 @@
   background-color: $color-white;
   border-radius: 3px;
   padding: 6rem;
-font-size: $default-font-size;
+  font-size: $default-font-size;
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    background-color: orangered;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+  }
 }
