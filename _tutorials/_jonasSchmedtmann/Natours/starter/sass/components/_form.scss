@@ -69,7 +69,16 @@
     top: 0;
 
     &::after {
-
+      content: "";
+      display: block;
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background-color: $color-primary;
     }
   }
 }
