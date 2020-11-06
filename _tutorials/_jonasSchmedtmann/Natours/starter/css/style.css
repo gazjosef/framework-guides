@@ -491,7 +491,9 @@ body {
     transform: rotate(5deg) scale(1.3); }
   .footer__copyright {
     border-top: 1px solid #777;
-    padding-top: 2rem; }
+    padding-top: 2rem;
+    width: 80%;
+    float: right; }
 
 .row {
   max-width: 114rem;
@@ -539,6 +541,15 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5;
+  background-image: radial-gradient(#55c57a, #28b485); }
 
 .section-about {
   background-color: #f7f7f7;
