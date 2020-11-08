@@ -1,6 +1,6 @@
 .navigation {
   &__checkbox {
-
+    display: none;
   }
   
   &__button {
@@ -23,14 +23,26 @@
     right: 6.5rem;
     background-image: radial-gradient($color-primary-light, $color-primary-dark);
     z-index: 1000;
+
+    // transform: scale(50);
   }
   
   &__nav {
-
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 150;
   }
   
   &__list {
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
   }
   
   &__item {
