@@ -575,7 +575,7 @@ body {
   z-index: 1500;
   opacity: 0;
   width: 0;
-  transition: all .8s; }
+  transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
 
 .navigation__list {
   position: absolute;
@@ -615,6 +615,15 @@ body {
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
   width: 100%; }
+
+.navigation__icon, .navigation__icon::before, .navigation__icon::after {
+  width: 3rem;
+  height: 2px;
+  background-color: #333;
+  display: inline-block; }
+
+.navigation__icon::before, .navigation__icon::after {
+  content: ""; }
 
 .section-about {
   background-color: #f7f7f7;
