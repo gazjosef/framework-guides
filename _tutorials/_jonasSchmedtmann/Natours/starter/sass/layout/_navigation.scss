@@ -1,5 +1,5 @@
 .navigation {
-  &__checkbox {
+    &__checkbox {
     display: none;
   }
   
@@ -13,6 +13,7 @@
     border-radius: 50%;
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba($color-black, .1);
+    text-align: center;
   }
   
   &__background {
@@ -95,6 +96,9 @@
 
   // ICON
   &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+
     &,
     &::before,
     &::after {
@@ -107,6 +111,16 @@
     &::before,
     &::after {
       content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -.8rem;
+    }
+
+    &::after {
+      top: .8rem;
     }
   }
 }
