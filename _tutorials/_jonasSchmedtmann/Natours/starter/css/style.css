@@ -433,8 +433,8 @@ body {
     display: table;
     overflow: hidden;
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5);
-    transition: all .4s; }
+    transform: translate(-50%, -50%) scale(0);
+    transition: all .5s .2s; }
   .popup__left {
     width: 33.3333333%;
     display: table-cell; }
