@@ -36,5 +36,7 @@ fruit_set.remove("Grape")
 # Clear set
 fruit_set.clear()
 
+# Delete set
+del fruit_set
 
 print(fruit_set)
