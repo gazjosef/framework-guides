@@ -13,6 +13,9 @@ age = 37
 # print("{1},{2},{0}".format("a","b","c"))
 
 # Arguments by position
-print("My name is {name} and I am {age}".format(name=name, age=age))
+# print("My name is {name} and I am {age}".format(name=name, age=age))
+
+# F-Strings (only in 3.6+)
+print(f'My name is {name} and I am {age}')
 
 # String Methods
