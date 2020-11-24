@@ -4,12 +4,15 @@ name = "Brad"
 age = 37
 
 # Concatenate
-print("Hello I am " + name + " and I am " + str(age))
+# print("Hello I am " + name + " and I am " + str(age))
 
 # String Formatting
 
 # Arguments by position
 # print("{},{},{}".format("a","b","c"))
-print("{1},{2},{0}".format("a","b","c"))
+# print("{1},{2},{0}".format("a","b","c"))
+
+# Arguments by position
+print("My name is {name} and I am {age}".format(name=name, age=age))
 
 # String Methods
