@@ -3,7 +3,12 @@
 # Core modules
 import datetime
 from datetime import date
+import time
 
 # today = datetime.date.today()
 today = date.today()
+
+timestamp = time.time()
+print(timestamp)
+
 print(today)
