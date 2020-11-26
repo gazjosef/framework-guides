@@ -2,16 +2,16 @@
     {
         "id": 1,
         "name": "Rick",
-        "email": "rick@gmail.com",
+        "email": "rick@gmail.com"
     },
     {
         "id": 2,
         "name": "Glenn",
-        "email": "glenn@gmail.com",
+        "email": "glenn@gmail.com"
     },
     {
         "id": 3,
         "name": "Negan",
-        "email": "negan@gmail.com",
+        "email": "negan@gmail.com"
     }
 ]
