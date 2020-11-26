@@ -4,11 +4,25 @@
 import datetime
 from datetime import date
 import time
+from time import time
+
+# Pip modules
+import camelcase
+
+# Custom modules
+import validator
+from validator import validate_email
 
 # today = datetime.date.today()
 today = date.today()
+timestamp = time()
 
-timestamp = time.time()
-print(timestamp)
+camel = camelcase.CamelCase()
+text = "hello there world"
+# print(camel.hump(text))
 
-print(today)
+email = "test@test.com"
+if validate_email(email):
+    print("Email is valid")
+else:
+    print("Not an email")
