@@ -1,0 +1,44 @@
+What is Node.Js?
+
+- JavaScript Runtime (Not a Language or a Framework)
+- Built on the V8 JavaScript Engine
+
+Essentially allows us to run JavaScript on the Server
+
+
+Why Use Node?
+
+- Fast, efficient and highly scalable
+- Event driven, non-blocking I/O model
+- Popular in the industry
+- Same Language on the front and back end
+
+Non-Blocking I/O
+
+- Works on a single thread using non-blocking I/O calls
+- Supports tens of thousands concurrent connections
+- Optimizes throughput & scalability in apps with many I/O operations
+- All of this makes Node.js apps very fast and efficient
+
+Node's Event Loop
+
+Single threaded
+Supports con-currency via events & callbacks
+Event Emitter is used to bind events and listeners
+
+NPM - Node Package Manager
+
+Install 3rd party packages (Frameworks, libraries, tools, etc)
+Packages get stored in the "node_modules" folder
+All dependencies are listed in a "package.json" file
+NPM scripts can be created to run certain tasks such as run a server
+
+npm init                Generates a package.json file
+npm instal express      Installs a package locally
+npm install -g nodemon  Installs a package globally
+
+Node Modules
+
+Node Core Modules (path, fs, http, etc)
+3rd Party Modules/Packages installed via NPM
+Custom Modules

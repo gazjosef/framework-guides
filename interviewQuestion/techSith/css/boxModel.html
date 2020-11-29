@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Box Model</title>
+  </head>
+
+  <!-- What is Box Model? 70% -->
+
+  <!-- 
+  content
+  padding
+  border
+  margin
+
+  A box that wraps around each element
+ -->
+
+  <style>
+    .box-1 {
+      height: 100px;
+      width: 100px;
+      padding: 10px;
+      border: 20px solid red;
+      margin: 30px;
+      background-color: blue;
+      box-sizing: border-box;
+      content: "Hello World";
+    }
+
+    .box-1::after {
+      content: " (" attr() " ) ";
+    }
+  </style>
+
+  <body>
+    <div class="box-1"></div>
+  </body>
+</html>
