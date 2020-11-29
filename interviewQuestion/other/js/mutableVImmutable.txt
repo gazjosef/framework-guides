@@ -1,7 +1,0 @@
-Explain the difference between mutable and immutable objects.
-
-Immutability is a core principle in functional programming, and has lots to offer to object-oriented programs as well. 
-
-A mutable object is an object whose state can be modified after it is created. 
-
-An immutable object is an object whose state cannot be modified after it is created.
