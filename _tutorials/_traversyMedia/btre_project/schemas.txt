@@ -3,6 +3,13 @@ MODEL/DB FIELDS
 ### LISTING
 id: INT
 realtor: INT (FOREIGN KEY [realtor])
+title: STR
+address: STR
+city: STR
+state: STR
+zipcode: STR
+description: TEXT
+price: INT
 
 ### REALTOR
 
