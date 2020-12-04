@@ -1,7 +1,10 @@
 MODEL/DB FIELDS
 
 ### LISTING
+id: INT
+realtor: INT (FOREIGN KEY [realtor])
 
 ### REALTOR
+
 
 ### CONTACT
