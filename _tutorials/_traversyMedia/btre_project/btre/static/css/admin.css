@@ -7,3 +7,21 @@
 #branding h1 {
     color: #fff;
 }
+
+a:link,
+a:visited {
+    color: #10284e; /* Dark Blue */
+}
+
+div.breadcrumbs {
+    background: #30caa0;
+    color: #10284e; /* Dark Blue */;
+}
+
+div.breadcrumbs a {
+    color: #333;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background: #30caa0;
+}
