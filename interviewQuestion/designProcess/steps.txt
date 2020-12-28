@@ -1,0 +1,11 @@
+What is your process when creating an application?
+
+Phase 0: Research, ideate and design.
+Phase 1: Make a roadmap / estimates for when you want to finish and work backwards to create milestones.
+Phase 2: Set up folder structure, git, prettier, npm, frameworks etc
+Phase 3: Roughing in everything quickly... Pages, Routes, Placeholders... Big blocks of color for layout and graphics... "lorem ipsum" for text.
+Phase 4: Refine CSS & visuals to about 60%.
+Phase 5: Add Js and core functionality to about 60%
+Phase 6: SEO, Analytics, Browser compat, performances etc.
+Phase 7: Refine UI/UX, test, repeat till you get to 100%.
+Phase 8: Ship it.
