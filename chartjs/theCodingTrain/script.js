@@ -1,38 +1,43 @@
-const xlabels = []
-const ytemps = []
+
 
 chartIt()
 
 async function chartIt() {
-    await getData()
+    const data = await getData()
 
     const ctx = document.getElementById('chart').getContext('2d');
     const myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
-            labels: xlabels,
+            labels: data.xs,
             datasets: [{
-                label: "Global Average Temperature",
-                data: ytemps,
-                backgroundColor: ['rgba(255, 99, 132, 0.2)',],
-                borderColor: ['rgba(255, 99, 132, 1)',],
+                label: "Combined Land-Surface Air & Sea-Surface Water Temperature In C°",
+                data: data.ys,
+                fill: false,
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
                 borderWidth: 1
             }]
         },
-        // options: {
-        //     scales: {
-        //         yAxes: [{
-        //             ticks: {
-        //                 beginAtZero: true
-        //             }
-        //         }]
-        //     }
-        // }
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        callback: function(value, index, values) {
+                            return value + '°';
+                        }
+                    }
+                }]
+            }
+        }
     });
 }
 
 async function getData() {
-    const response = await fetch("ZonAnn.Ts+dSST.csv")
+    const xs = [];
+    const ys = [];
+
+    const response = await fetch("ZonAnn.Ts+dSST.csv");
     const data = await response.text();
 
     const table = data
@@ -41,10 +46,10 @@ async function getData() {
     table.forEach((row) => {
         const columns = row.split(',');
         const year = columns[0];
-        xlabels.push(year)
+        xs.push(year)
         const temp = columns[1];
-        ytemps.push(parseFloat(temp) + 14)
+        ys.push(parseFloat(temp) + 14)
         console.log(year, temp);
     })
-    console.log(xlabels);
+    return { xs, ys }
 }
