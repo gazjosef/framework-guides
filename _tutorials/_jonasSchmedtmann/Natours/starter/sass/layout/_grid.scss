@@ -10,6 +10,11 @@
     }
   }
 
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+
   @include clearfix;
 
   [class^="col-"] {
@@ -20,6 +25,7 @@
 
       @include respond(tab-port) {
         margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
       }
     }
 
