@@ -46,3 +46,5 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     @media (min-width: 112.5em) { @content };  // 1800px
   }
 }
+
+// em instead of rem for media queries
