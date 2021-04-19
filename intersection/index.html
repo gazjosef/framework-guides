@@ -13,12 +13,12 @@
     </section>
     <section class="content">
         <div class="left">
-            <img src="images/yellow.jpeg" alt="yellow" class="yellow anim">
-            <p>I have no clue what I'm doing here LOL!</p>
-            <img src="images/squiggly.svg" alt="squig" class="squig">
+            <img src="images/yellow.jpeg" alt="yellow" class="yellow anim" data-delay="0s">
+            <p class="anim" data-delay=".5s">I have no clue what I'm doing here LOL!</p>
+            <img src="images/squiggly.svg" alt="squig" class="squig anim" data-delay=".7s">
         </div>
         <div class="right">
-            <div>
+            <div class="anim" data-delay="1s">
                 <h2>Get Yellow</h2>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit</p>
             </div>
@@ -26,13 +26,23 @@
     </section>
 
     <script>
-        const images = document.querySelector('.anim')
+        const images = document.querySelectorAll('.anim')
 
         observer = new IntersectionObserver((entries) => {
             console.log(entries)
+
+            entries.forEach((entry) => {
+                if(entry.intersectionRatio > 0) {
+                    entry.target.style.animation = `anim1 2s ${entry.target.dataset.delay} forwards ease-out`
+                } else {
+                    entry.target.style.animation = `none`
+                }
+            })
         })
 
-        observer.observe(images)
+        images.forEach(image => {
+            observer.observe(image)
+        })
 
     </script>
 </body>
