@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './App';
+import './index.css';
 
-ReactDOM.render(<div>Hello</div>, document.getElementById('root')
+import ContainerComponent from "./Components/Container/Container"
+
+ReactDOM.render(<ContainerComponent>Hello</ContainerComponent>, document.getElementById('root')
 );
