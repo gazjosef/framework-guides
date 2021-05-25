@@ -2,6 +2,8 @@
 title: "Hugo Dog"
 date: 2021-05-24T10:28:15+10:00
 draft: true
+photoauthor: "Gareth Hind"
+tags: ['photo', 'dog', 'tongue']
 ---
 
 ## HUGO the Dog!

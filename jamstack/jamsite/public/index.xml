@@ -5,6 +5,59 @@
     <link>http://example.org/</link>
     <description>Recent content on JAMSite</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <copyright>Copyright 2019 Stackacademy.tv</copyright>
+    <lastBuildDate>Mon, 24 May 2021 14:50:15 +1000</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://example.org/about/</link>
+      <pubDate>Tue, 25 May 2021 09:48:19 +1000</pubDate>
+      
+      <guid>http://example.org/about/</guid>
+      <description>About JAMSite Some info regarding this site at the top level&amp;hellip;
+My beats travel like a vortex through your spine, to the top of your cerebral cortex. I bomb atomically Socrates&#39; philosophies and hypothesis can&amp;rsquo;t define how I be dropping these mockeries.
+I smoke on the mic like smoking Joe Frazier, the hell raiser, raising hell with the flavor. So uhh, tic toc and keep ticking, while I get you flipping off what I&amp;rsquo;m kicking.</description>
+    </item>
+    
+    <item>
+      <title>Photo One</title>
+      <link>http://example.org/photos/photo-one/</link>
+      <pubDate>Mon, 24 May 2021 14:50:15 +1000</pubDate>
+      
+      <guid>http://example.org/photos/photo-one/</guid>
+      <description>Photo heading Photo except
+Photo content</description>
+    </item>
+    
+    <item>
+      <title>Second Page</title>
+      <link>http://example.org/second-page/</link>
+      <pubDate>Mon, 24 May 2021 12:10:10 +1000</pubDate>
+      
+      <guid>http://example.org/second-page/</guid>
+      <description>Post except
+Main Heading Post content&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Hugo Dog</title>
+      <link>http://example.org/photos/hugo-dog/</link>
+      <pubDate>Mon, 24 May 2021 10:28:15 +1000</pubDate>
+      
+      <guid>http://example.org/photos/hugo-dog/</guid>
+      <description>HUGO the Dog! Feeling mad hostile, ran the apostle, flowing like Christ when I speak the gospel. Olympic torch flaming we burn so sweet, the thrill of victory the agony defeat. So uhh, tic toc and keep ticking, while I get you flipping off what I&amp;rsquo;m kicking.
+Olympic torch flaming we burn so sweet, the thrill of victory the agony defeat. Domino effect arts and crafts, paragraphs contain cyanide. It was the night before New Year&amp;rsquo;s all through the projects, not a handgun was silent, not even a Tec.</description>
+    </item>
+    
+    <item>
+      <title>First Page</title>
+      <link>http://example.org/first-page/</link>
+      <pubDate>Mon, 24 May 2021 10:19:45 +1000</pubDate>
+      
+      <guid>http://example.org/first-page/</guid>
+      <description>First JAMSite Page Behold the bold soldier control the globe slowly, proceeds to blow, swinging swords like Shinobi. The game of chess, is like a swordfight, you must think first before you move. Your head rush, fly like Egyptian musk. Behold the bold soldier control the globe slowly, proceeds to blow, swinging swords like Shinobi.
+Rae got it going on pal, call me the rap assassinator, rhymes rugged and built like Schwarzenegger.</description>
+    </item>
+    
   </channel>
 </rss>
