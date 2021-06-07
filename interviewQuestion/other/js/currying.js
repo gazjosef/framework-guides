@@ -1,4 +1,4 @@
-// Can you give an example of a curry function and why this syntax offers an advantage?
+// * Can you give an example of a curry function and why this syntax offers an advantage?
 
 /*
 Currying is a pattern where a function with more than one parameter is broken into multiple functions that, when called in series, will accumulate all of the required parameters one at a time. 

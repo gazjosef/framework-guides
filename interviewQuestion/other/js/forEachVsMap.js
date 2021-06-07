@@ -1,4 +1,4 @@
-// forEach versus map
+// * forEach versus map
 
 /*
  The main difference between .forEach and .map() is that .map() returns a new array. 
@@ -8,7 +8,7 @@
  - If you simply need to iterate over an array, forEach is a fine choice.
 */
 
-// forEach
+// * forEach
 
 /*
 - Iterates through the element in an array.
@@ -23,7 +23,7 @@ const aDoubled = a.forEach((num, index) => {
 
 console.log(aDoubled); // undefined
 
-// map
+// * Map
 
 /*
 - Iterates through the element in an array.

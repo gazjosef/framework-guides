@@ -1,6 +1,6 @@
-// Prototype
+// * Prototype
 
-// Constructor
+// * Constructor
 
 var x = function(j) {
   this.i = 0;

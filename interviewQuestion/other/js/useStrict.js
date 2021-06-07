@@ -1,4 +1,5 @@
-// Stack Overflow
+// * Stack Overflow
+
 /*
 Its main purpose is to do more checking.
 
@@ -18,7 +19,7 @@ It similarly disallows a lot of things that are technically valid to do. NaN = "
 
 'use strict' is a statement used to enable strict mode to entire scripts or individual functions. Strict mode is a way to opt into a restricted variant of JavaScript.*/
 
-// Advantages
+// *Advantages
 
 /* 
 Makes it impossible to accidentally create global variables.

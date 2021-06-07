@@ -1,4 +1,4 @@
-// Function Scope
+// * Function Scope
 
 /*
 var x = function() {
@@ -23,7 +23,7 @@ var x = function() {
 };
 */
 
-// Hoisting
+// * Hoisting
 
 /*
 var x = function() {
@@ -33,7 +33,7 @@ var x = function() {
 x();
 */
 
-/*define variable at the top of the function*/
+//? define variable at the top of the function
 
 /*
 var y = 2;
@@ -44,7 +44,7 @@ var x = function() {
 x();
 */
 
-// Const / Let
+// * Const / Let
 
 let x = function() {
   if (true) {

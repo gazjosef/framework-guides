@@ -1,4 +1,4 @@
-// ES6 Template Literals offer a lot of flexibility in generating strings, can you give an example?
+// * ES6 Template Literals offer a lot of flexibility in generating strings, can you give an example?
 
 /*
 Template literals help make it simple to do string interpolation, or to include variables in a string. Before ES2015, it was common to do something like this:

@@ -1,4 +1,4 @@
-// Call
+// * Call
 
 var obj = { num: 2 };
 // var obj2 = { num: 5 };
@@ -11,7 +11,7 @@ console.log(addToThis.call(obj, 1, 2, 3));
 
 // functionName.call(obj, functionArguments)
 
-// Apply
+// * Apply
 
 var arr = [1, 2, 3];
 // console.log(addToThis.apply(obj, arr));
@@ -19,7 +19,7 @@ var arr = [1, 2, 3];
 
 // functionName.apply(obj [arg1, arg2, arg3])
 
-// Bind
+// * Bind
 
 var bound = addToThis.bind(obj);
 console.log(bound(1, 2, 3));

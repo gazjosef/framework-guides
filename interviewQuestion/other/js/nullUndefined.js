@@ -1,4 +1,4 @@
-// null v undefined
+// * null v undefined
 
 var test;
 console.log(test); // undefined

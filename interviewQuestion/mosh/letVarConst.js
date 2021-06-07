@@ -1,5 +1,5 @@
-// var: var => function-scope variables
-// ES6 (2015): let, const => blocked-scope variables
+//* var: var => function-scope variables
+//* ES6 (2015): let, const => blocked-scope variables
 
 /*
 function start() {

@@ -1,7 +1,7 @@
 "use strict";
 // ${this.table} will not work inside a function
 
-// House
+// * House
 
 this.table = "window table";
 console.log(this.table);
@@ -15,7 +15,8 @@ console.log(this.table);
 
 // cleanTable.call(this, "some soap");
 
-// Public Property
+// * Public Property
+
 this.garage = {
   table: "garage table"
 };

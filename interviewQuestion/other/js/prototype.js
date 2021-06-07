@@ -1,4 +1,4 @@
-// Explain how prototypal inheritance works
+// * Explain how prototypal inheritance works
 
 /*
 All JavaScript objects have a prototype property, that is a reference to another object.

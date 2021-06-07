@@ -1,10 +1,6 @@
-/*
+// * The Object that is executing the current function
 
-The Object that is executing the current function
-
-*/
-
-// Method -> Object
+// * Method -> Object
 
 const video = {
   title: "a",
@@ -23,7 +19,7 @@ const video = {
 
 video.showTags();
 
-// Function -> Global Object (window browser / global)
+// * Function -> Global Object (window browser / global)
 
 // function Video(title) {
 //   this.title = title;

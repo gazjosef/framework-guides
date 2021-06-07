@@ -1,4 +1,4 @@
-// What's the difference between .call and .apply?
+// * What's the difference between .call and .apply?
 
 /*
 - Both .call and .apply are used to invoke functions and the first parameter will be used as the value of this within the function. 
