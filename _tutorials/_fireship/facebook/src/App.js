@@ -26,6 +26,12 @@ function App() {
 
 function DropdownMenu() {
   const [activeMenu, setActiveMenu] = useState("main");
+  const [menuHeight, setMenuHeight] = useState(null);
+
+  function calcHeight(el) {
+    const height = el.offsetHeight;
+    setMenuHeight(height);
+  }
 
   function DropdownItem(props) {
     return (
@@ -44,12 +50,13 @@ function DropdownMenu() {
   }
 
   return (
-    <div className="dropdown">
+    <div className="dropdown" style={{ height: menuHeight }}>
       <CSSTransition
         in={activeMenu === "main"}
-        unmountOnExit
         timeout={500}
         classNames="menu-primary"
+        unmountOnExit
+        onEnter={calcHeight}
       >
         <div className="menu">
           <DropdownItem>My Profile</DropdownItem>
@@ -65,12 +72,20 @@ function DropdownMenu() {
 
       <CSSTransition
         in={activeMenu === "settings"}
-        unmountOnExit
         timeout={500}
         classNames="menu-secondary"
+        unmountOnExit
+        onEnter={calcHeight}
       >
         <div className="menu">
           <DropdownItem leftIcon={<ArrowIcon />} goToMenu="main" />
+          <DropdownItem>Settings</DropdownItem>
+          <DropdownItem>Settings</DropdownItem>
+          <DropdownItem>Settings</DropdownItem>
+          <DropdownItem>Settings</DropdownItem>
+          <DropdownItem>Settings</DropdownItem>
+          <DropdownItem>Settings</DropdownItem>
+          <DropdownItem>Settings</DropdownItem>
           <DropdownItem>Settings</DropdownItem>
         </div>
       </CSSTransition>
