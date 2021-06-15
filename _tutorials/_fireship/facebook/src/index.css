@@ -7,7 +7,8 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 :root {
@@ -59,7 +60,7 @@ a {
 
 /* Icon Button */
 .icon-button {
-  --button-size: calc(var(--nav-size) * 0.5 );
+  --button-size: calc(var(--nav-size) * 0.5);
   width: var(--button-size);
   height: var(--button-size);
   background-color: #484a4d;
@@ -73,7 +74,7 @@ a {
 }
 
 .icon-button:hover {
-  filter: brightness(1.2)
+  filter: brightness(1.2);
 }
 
 .icon-button svg {
@@ -85,15 +86,15 @@ a {
 /* Dropdown Menu */
 
 .dropdown {
-   position: absolute;
-   top: 58px;
-   width: 300px;
-   transform: translateX(-45%);
-   background-color: var(--bg);
-   border: var(--border);
-   border-radius: var(--border-radius);
-   padding: 1rem;
-   overflow: hidden;
+  position: absolute;
+  top: 58px;
+  width: 300px;
+  transform: translateX(-45%);
+  background-color: var(--bg);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  overflow: hidden;
 }
 
 .menu-item {
@@ -102,7 +103,7 @@ a {
   align-items: center;
   border-radius: var(--border-radius);
   transition: background var(--speed);
-  padding: 0.5rem; 
+  padding: 0.5rem;
 }
 
 .menu-item:hover {
