@@ -13,6 +13,24 @@ export const Navbar = () => {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(true);
+    }
+  };
+
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(true);
+    } else {
+      setDropdown(false);
+    }
+  };
+
+  let iconStyles = { color: "white" };
+
   return (
     <>
       <nav className="navbar">
@@ -20,7 +38,11 @@ export const Navbar = () => {
           EPIC
         </Link>
         <div className="menu-icon" onClick={handleClick}>
-          {click ? <FaTimes /> : <FaBars />}
+          {click ? (
+            <FaTimes style={iconStyles} />
+          ) : (
+            <FaBars style={iconStyles} />
+          )}
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
@@ -28,7 +50,11 @@ export const Navbar = () => {
               Home
             </Link>
           </li>
-          <li className="nav-item">
+          <li
+            className="nav-item"
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+          >
             <Link
               to="/services"
               className="nav-links"
