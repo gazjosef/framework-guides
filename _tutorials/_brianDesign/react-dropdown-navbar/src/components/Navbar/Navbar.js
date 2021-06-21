@@ -30,12 +30,13 @@ export const Navbar = () => {
   };
 
   let iconStyles = { color: "white" };
+  let logoStyles = { marginLeft: "0.5rem", fontSize: "1.6rem" };
 
   return (
     <>
       <nav className="navbar">
-        <Link to="/" className="navbar-logo">
-          EPIC <FaFirstdraft />
+        <Link to="/#" exact="true" className="navbar-logo">
+          EPIC <FaFirstdraft style={logoStyles} />
         </Link>
         <div className="menu-icon" onClick={handleClick}>
           {click ? (
@@ -46,7 +47,12 @@ export const Navbar = () => {
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+            <Link
+              to="/#"
+              exact="true"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
               Home
             </Link>
           </li>
