@@ -4,7 +4,7 @@ import { Dropdown } from "../Dropdown/Dropdown";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-import { FaTimes, FaBars, FaCaretDown } from "react-icons/fa";
+import { FaTimes, FaBars, FaCaretDown, FaFirstdraft } from "react-icons/fa";
 
 export const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -35,7 +35,7 @@ export const Navbar = () => {
     <>
       <nav className="navbar">
         <Link to="/" className="navbar-logo">
-          EPIC
+          EPIC <FaFirstdraft />
         </Link>
         <div className="menu-icon" onClick={handleClick}>
           {click ? (
@@ -63,6 +63,15 @@ export const Navbar = () => {
               Services <FaCaretDown />
             </Link>
             {dropdown && <Dropdown />}
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/products"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Products
+            </Link>
           </li>
           <li className="nav-item">
             <Link
