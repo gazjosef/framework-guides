@@ -11,4 +11,20 @@ export default function useTimeOut(callback, delay) {
     const set = useCallback(() => {
         timeOutRef.current = setTimeout(() => callbackRef.current(), delay)
     }, [delay])
+
+    const clear = useCallback(() => {
+        timeOutRef.current && clearTimeout(timeOutRef.current)
+    }, [])
+
+    useEffect(() => {
+        set()
+        return clear
+    }, [delay, clear, set])
+
+    const reset = useCallback(() => {
+        clear()
+        set()
+    }, [clear, set])
+
+    return { reset, clear}
 }
