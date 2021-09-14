@@ -101,25 +101,76 @@ a:hover {
 }
 
 .date__day {
-  font-size: var(--fs-h2);
   margin: 0;
   color: var(--clr-gray);
+  font-size: var(--fs-h2);
   font-weight: var(--fw-light);
 }
 
 .temp {
   --border: solid 0.5em var(--clr-accent-dark);
+  border-left: var(--border);
+  border-right: var(--border);
+  padding: 0 2em;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
-  border-left: var(--border);
-  border-right: var(--border);
 }
 
 .wind {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3 / 4;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: min-content 1fr;
+      grid-template-rows: -webkit-min-content 1fr;
+      grid-template-rows: min-content 1fr;
+  -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.wind .section-title,
+.wind .reading {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.wind__direction {
+  --size: 6rem;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+}
+
+.wind__arrow {
+  /* Update Custom Props in JS
+        to update the direction */
+  --direction: 180deg;
+  --size: 1rem;
+  height: calc(var(--size) * 3);
+  width: var(--size);
+  background: var(--clr-accent-dark);
+  -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
+          clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  -webkit-transform: translateY(-50%) rotate(var(--direction));
+          transform: translateY(-50%) rotate(var(--direction));
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
 }
 
 .info {
