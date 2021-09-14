@@ -3,8 +3,10 @@ import useTimeOut from "./useTimeOut";
 
 
 export default function TimeOutComponent() {
+    // Increment
     const [count, setCount] = useState(10)
-    const {clear, reset} = useTimeOut(() => setCount(0), 1000)
+    // Clear & Reset Timeout
+    const {clear, reset} = useTimeOut(() => setCount(0), 500)
 
     return (
         <div>
