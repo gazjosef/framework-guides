@@ -8,7 +8,6 @@
 ////////////////////////////////////
 // SEARCH
 .search {
-  background-color: orangered;
   flex: 0 0 40%;
 
   display: flex;
@@ -25,13 +24,22 @@
     border-radius: 100px;
     width: 90%;
     transition: all 0.2s;
-    margin-right: -3.5rem;
+    margin-right: -3.25rem;
 
     &:focus {
       outline: none;
       width: 100%;
       background-color: var(--color-grey-light-3);
     }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4);
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: var(--color-grey-light-3);
   }
 
   &__button {
@@ -50,6 +58,7 @@
   &__icon {
     height: 2rem;
     width: 2rem;
+    fill: var(--color-grey-dark-3);
   }
 }
 
