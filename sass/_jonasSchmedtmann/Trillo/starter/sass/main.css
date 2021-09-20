@@ -69,6 +69,15 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 40%;
           flex: 0 0 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .search__input {
@@ -82,6 +91,7 @@ body {
   width: 90%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  margin-right: -3.5rem;
 }
 
 .search__input:focus {
@@ -93,6 +103,15 @@ body {
 .search__button {
   border: none;
   background-color: var(--color-grey-light-2);
+}
+
+.search__button:focus {
+  outline: none;
+}
+
+.search__button:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .search__icon {

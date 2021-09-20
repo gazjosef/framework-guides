@@ -11,6 +11,10 @@
   background-color: orangered;
   flex: 0 0 40%;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -21,6 +25,7 @@
     border-radius: 100px;
     width: 90%;
     transition: all 0.2s;
+    margin-right: -3.5rem;
 
     &:focus {
       outline: none;
@@ -32,6 +37,14 @@
   &__button {
     border: none;
     background-color: var(--color-grey-light-2);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
   }
 
   &__icon {
