@@ -88,9 +88,9 @@ body {
   padding: 0.7rem 2rem;
   border-radius: 100px;
   width: 90%;
+  margin-right: -3.25rem;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  margin-right: -3.25rem;
 }
 
 .search__input:focus {
@@ -130,6 +130,23 @@ body {
 
 .user-nav {
   background-color: greenyellow;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-nav > * {
+  padding: 0 2rem;
+  cursor: pointer;
+}
+
+.user-nav > *:hover {
+  background-color: var(--color-grey-light-2);
 }
 
 .user-nav__icon {
