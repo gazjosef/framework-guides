@@ -216,16 +216,20 @@ body {
   background-color: var(--color-primary);
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
-  -webkit-transition: width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, -webkit-transform 0.2s;
-  transition: width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, -webkit-transform 0.2s;
-  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
-  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, -webkit-transform 0.2s;
+  -webkit-transition: width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s, -webkit-transform 0.2s;
+  transition: width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s, -webkit-transform 0.2s;
+  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
+  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s, -webkit-transform 0.2s;
 }
 
-.side-nav__item:hover::before {
+.side-nav__item:hover::before, .side-nav__item--active::before {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
   width: 100%;
+}
+
+.side-nav__item:active::before {
+  background-color: var(--color-primary-light);
 }
 
 .side-nav__link:link, .side-nav__link:visited {
@@ -234,6 +238,8 @@ body {
   text-transform: uppercase;
   display: block;
   padding: 1.5rem 3rem;
+  position: relative;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
