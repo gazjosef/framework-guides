@@ -262,6 +262,17 @@ body {
   text-align: center;
 }
 
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gallery__photo {
+  width: 100%;
+  display: block;
+}
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -312,7 +323,6 @@ body {
 
 .hotel-view {
   background-color: #fff;
-  background-color: orangered;
   height: 80rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
