@@ -277,6 +277,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.overview__stars {
+  margin-right: auto;
 }
 
 .overview__icon-star, .overview__icon-location {

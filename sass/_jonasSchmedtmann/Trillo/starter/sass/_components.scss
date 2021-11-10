@@ -209,11 +209,14 @@
 
 .overview {
   display: flex;
+  justify-content: space-between;
 
   &__heading {
   }
 
   &__stars {
+    // * FLEXBOX HACK: Margin Right Auto
+    margin-right: auto;
   }
 
   &__icon-star,
