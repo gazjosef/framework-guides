@@ -40,3 +40,18 @@
 
   flex: 1;
 }
+
+.detail {
+  display: flex;
+}
+
+.description {
+  background-color: orangered;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+}
+
+.user-reviews {
+  background-color: yellowgreen;
+  flex: 1;
+}
