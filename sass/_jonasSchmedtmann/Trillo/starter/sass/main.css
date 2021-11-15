@@ -418,6 +418,10 @@ body {
   }
 }
 
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
