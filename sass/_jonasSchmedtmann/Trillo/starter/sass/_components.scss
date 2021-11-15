@@ -373,8 +373,8 @@
     margin-right: auto;
   }
 
-  &__friends {
-  }
+  // &__friends {
+  // }
 
   &__photo {
     box-sizing: content-box;
@@ -387,4 +387,38 @@
       margin-right: -1.5rem;
     }
   }
+}
+
+////////////////////////////////////
+// REVIEWS
+
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+
+  // &__text {
+  // }
+
+  // &__user {
+  // }
+
+  &__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+  }
+
+  // &__user-box {
+  // }
+
+  // &__user-name {
+  // }
+
+  // &__user-date {
+  // }
+
+  // &__rating {
+  // }
 }
