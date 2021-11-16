@@ -578,31 +578,50 @@ body {
   background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
   color: #fff;
   overflow: hidden;
+  cursor: pointer;
   font-size: 1.5rem;
   font-weight: 300;
   text-transform: uppercase;
   position: relative;
 }
 
-.btn__visible {
+.btn > * {
+  height: 100%;
+  width: 100%;
   display: inline-block;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btn__visible {
   padding: 2rem 7.5rem;
 }
 
 .btn__invisible {
   padding: 2rem 0;
-  height: 100%;
-  width: 100%;
-  display: inline-block;
   position: absolute;
   left: 0;
   top: -100%;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-image: -webkit-gradient(linear, right top, left top, from(var(--color-primary-light)), to(var(--color-primary-dark)));
+  background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+}
+
+.btn:hover .btn__visible {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .btn:hover .btn__invisible {
   top: 0;
+}
+
+.btn:focus {
+  outline: none;
+  -webkit-animation: pulsate 1s infinite;
+          animation: pulsate 1s infinite;
 }
 
 .container {

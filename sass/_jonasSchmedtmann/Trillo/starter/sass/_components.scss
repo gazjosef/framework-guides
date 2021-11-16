@@ -494,6 +494,7 @@
   );
   color: #fff;
   overflow: hidden;
+  cursor: pointer;
 
   font-size: 1.5rem;
   font-weight: 300;
@@ -501,29 +502,45 @@
 
   position: relative;
 
-  &__visible {
+  & > * {
+    height: 100%;
+    width: 100%;
+
     display: inline-block;
+
+    transition: all 0.2s;
+  }
+
+  &__visible {
     padding: 2rem 7.5rem;
   }
 
   &__invisible {
     padding: 2rem 0;
-    height: 100%;
-    width: 100%;
 
-    display: inline-block;
     position: absolute;
     left: 0;
     top: -100%;
+  }
 
-    transition: all 0.2s;
+  &:hover {
+    background-image: linear-gradient(
+      to left,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
   }
 
   &:hover &__visible {
-    // top: 0;
+    transform: translateY(100%);
   }
 
   &:hover &__invisible {
     top: 0;
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
   }
 }
