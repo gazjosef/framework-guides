@@ -476,7 +476,54 @@
     margin-bottom: 2.5rem;
 
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 300;
+  }
+}
+
+////////////////////////////////////
+// CALL-TO-ACTION
+
+.btn {
+  border: none;
+  border-radius: 100px;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  color: #fff;
+  overflow: hidden;
+
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  position: relative;
+
+  &__visible {
+    display: inline-block;
+    padding: 2rem 7.5rem;
+  }
+
+  &__invisible {
+    padding: 2rem 0;
+    height: 100%;
+    width: 100%;
+
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -100%;
+
+    transition: all 0.2s;
+  }
+
+  &:hover &__visible {
+    // top: 0;
+  }
+
+  &:hover &__invisible {
+    top: 0;
   }
 }
