@@ -87,6 +87,17 @@ body {
           justify-content: center;
 }
 
+@media only screen and (max-width: 31.25em) {
+  .search {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
 .search__input {
   font-family: inherit;
   font-size: inherit;
@@ -206,7 +217,7 @@ body {
   margin-top: 3.5rem;
 }
 
-@media only screen and (max-width: 56.75em) {
+@media only screen and (max-width: 56.25em) {
   .side-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -223,13 +234,13 @@ body {
   margin-bottom: 0.5rem;
 }
 
-@media only screen and (max-width: 56.75em) {
+@media only screen and (max-width: 56.25em) {
   .side-nav__item:not(:last-child) {
     margin: 0;
   }
 }
 
-@media only screen and (max-width: 56.75em) {
+@media only screen and (max-width: 56.25em) {
   .side-nav__item {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -279,12 +290,22 @@ body {
           align-items: center;
 }
 
-@media only screen and (max-width: 56.75em) {
+@media only screen and (max-width: 56.25em) {
   .side-nav__link:link, .side-nav__link:visited {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .side-nav__link:link, .side-nav__link:visited {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1.5rem 0.5rem;
   }
 }
 
@@ -295,6 +316,15 @@ body {
   fill: currentColor;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .side-nav__icon {
+    margin-right: 0;
+    margin-bottom: 0.7rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
 .legal {
   padding: 2.5rem;
   color: var(--color-grey-light-4);
@@ -302,7 +332,7 @@ body {
   text-align: center;
 }
 
-@media only screen and (max-width: 56.75em) {
+@media only screen and (max-width: 56.25em) {
   .legal {
     display: none;
   }
@@ -335,6 +365,13 @@ body {
   font-weight: 300;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .overview__heading {
+    font-size: 1.8rem;
+    padding: 1.25rem 2rem;
+  }
 }
 
 .overview__stars {
@@ -386,15 +423,33 @@ body {
           justify-content: center;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .overview__rating {
+    padding: 0 1.5rem;
+  }
+}
+
 .overview__rating-average {
   font-size: 2.25rem;
   font-weight: 300;
   margin-bottom: -3px;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .overview__rating-average {
+    font-size: 1.8rem;
+  }
+}
+
 .overview__rating-count {
   font-size: 0.8rem;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .overview__rating-count {
+    font-size: 0.5rem;
+  }
 }
 
 .btn-inline {
@@ -553,7 +608,7 @@ body {
   position: relative;
 }
 
-@media only screen and (max-width: 56.75em) {
+@media only screen and (max-width: 56.25em) {
   .review {
     padding: 2rem;
     margin-bottom: 3rem;
@@ -621,7 +676,7 @@ body {
   text-align: center;
 }
 
-@media only screen and (max-width: 56.75em) {
+@media only screen and (max-width: 56.25em) {
   .cta {
     padding: 2.5rem 0;
   }
@@ -720,13 +775,20 @@ body {
           align-items: center;
 }
 
+@media only screen and (max-width: 31.25em) {
+  .header {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-@media only screen and (max-width: 56.75em) {
+@media only screen and (max-width: 56.25em) {
   .content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -769,9 +831,18 @@ body {
   font-size: 1.4rem;
 }
 
-@media only screen and (max-width: 56.75em) {
+@media only screen and (max-width: 56.25em) {
   .detail {
     padding: 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .detail {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -786,10 +857,17 @@ body {
           flex: 0 0 60%;
 }
 
-@media only screen and (max-width: 56.75em) {
+@media only screen and (max-width: 56.25em) {
   .description {
     padding: 2rem;
     margin-right: 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .description {
+    margin-right: 0;
+    margin-bottom: 3rem;
   }
 }
 
