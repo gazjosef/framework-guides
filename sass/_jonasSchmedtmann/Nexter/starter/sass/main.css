@@ -20,6 +20,14 @@ body {
   line-height: 1.6;
 }
 
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 80vh min-content auto;
+      grid-template-rows: 80vh -webkit-min-content auto;
+      grid-template-rows: 80vh min-content auto;
+}
+
 .sidebar {
   background-color: #c59963;
 }
