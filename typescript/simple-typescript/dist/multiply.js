@@ -1,3 +1,4 @@
+"use strict";
 /*
 
 export default function multiply(a: number, b: number): number {

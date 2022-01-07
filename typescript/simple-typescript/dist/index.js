@@ -1,7 +1,19 @@
 "use strict";
-function multiply(a, b) {
-    return a * b;
+class Robot {
+    constructor(name) {
+        this.name = name;
+    }
+    askName() {
+        console.log(`My name is ${this.name}`);
+    }
+    move(distance) {
+        console.log(`${this.name} moved ${distance} meters`);
+    }
 }
-const a = 5;
-const b = 2;
-console.log(`${a} * ${b} = ${multiply(a, b)}`);
+class FlyingRobot extends Robot {
+    constructor(name) {
+        super(name);
+    }
+}
+const robot = new Robot("John");
+robot.askName();

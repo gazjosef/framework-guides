@@ -1,26 +1,25 @@
-import multiply, { multiplyByTwo as mBy2, HelloWorld } from "./multiply";
+class Robot {
+  name: string;
 
-const a = 5;
-const b = 2;
+  constructor(name: string) {
+    this.name = name;
+  }
 
-console.log(`${a} * ${b} = ${multiply(a, b)}`);
-mBy2(2);
+  askName() {
+    console.log(`My name is ${this.name}`);
+  }
 
-// * TYPES
-
-// Null & Undefinedx
-
-let n: null = null;
-let u: undefined = undefined;
-
-let someNumber: number = null;
-
-function upperFirstLetter(str: string | null) {
-  if (str) {
-    return str[0].toUpperCase() + str.substring(1);
+  move(distance: number) {
+    console.log(`${this.name} moved ${distance} meters`);
   }
 }
 
-console.log(upperFirstLetter("hello"));
+class FlyingRobot extends Robot {
+  constructor(name: string) {
+    super(name);
+  }
+}
 
-upperFirstLetter(null);
+const robot = new Robot("John");
+
+robot.askName();
