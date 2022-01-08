@@ -19,6 +19,7 @@
     "strictNullChecks": true,
 
     // ! NOT PART OF TUTORIAL
+
     "strictPropertyInitialization": false,
 
     /* Completeness */
