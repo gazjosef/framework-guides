@@ -1,7 +1,10 @@
 "use strict";
 class Robot {
-    constructor(name) {
-        this.name = name;
+    constructor(_name) {
+        this._name = _name;
+    }
+    static isColorAvailable(color) {
+        return Robot.availableColors.includes(color);
     }
     askName() {
         console.log(`My name is ${this.name}`);
@@ -9,11 +12,34 @@ class Robot {
     move(distance) {
         console.log(`${this.name} moved ${distance} meters`);
     }
+    set color(color) {
+        if (!Robot.isColorAvailable(color)) {
+            throw new Error(`Color ${color} is not available`);
+        }
+        this._color = color;
+    }
+    set name(value) {
+        this._name = "PREFIX_" + value;
+    }
+    get name() {
+        return this._name + "_SUFFIX";
+    }
 }
+Robot.availableColors = ["Green", "Yellow"];
 class FlyingRobot extends Robot {
-    constructor(name) {
+    constructor(name, jetpackSize) {
         super(name);
+        this.jetpackSize = jetpackSize;
+    }
+    move(distance) {
+        console.log(`${this.name} is flying`);
+        super.move(distance);
     }
 }
 const robot = new Robot("John");
 robot.askName();
+const flyingRobot = new FlyingRobot("Jim", 2);
+flyingRobot.move(10);
+// console.log("Flying robot jetpack size is", flyingRobot.name);
+flyingRobot.name = "Kevin";
+console.log(`Hi, my name is ${flyingRobot.name}`);
