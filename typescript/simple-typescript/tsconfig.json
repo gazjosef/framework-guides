@@ -17,6 +17,8 @@
     /* Type Checking */
     "strict": true /* Enable all strict type-checking options. */,
     "strictNullChecks": true,
+
+    // ! NOT PART OF TUTORIAL
     "strictPropertyInitialization": false,
 
     /* Completeness */
