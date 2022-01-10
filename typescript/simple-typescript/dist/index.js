@@ -1,45 +1,30 @@
 "use strict";
+var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _Robot_name, _AdvancedRobot_name;
 class Robot {
-    constructor(_name) {
-        this._name = _name;
-    }
-    static isColorAvailable(color) {
-        return Robot.availableColors.includes(color);
-    }
-    askName() {
-        console.log(`My name is ${this.name}`);
-    }
-    move(distance) {
-        console.log(`${this.name} moved ${distance} meters`);
-    }
-    set color(color) {
-        if (!Robot.isColorAvailable(color)) {
-            throw new Error(`Color ${color} is not available`);
-        }
-        this._color = color;
-    }
-    set name(value) {
-        this._name = "PREFIX_" + value;
-    }
-    get name() {
-        return this._name + "_SUFFIX";
+    constructor(name) {
+        _Robot_name.set(this, void 0);
+        __classPrivateFieldSet(this, _Robot_name, name, "f");
     }
 }
-Robot.availableColors = ["Green", "Yellow"];
-class FlyingRobot extends Robot {
-    constructor(name, jetpackSize) {
-        super(name);
-        this.jetpackSize = jetpackSize;
+_Robot_name = new WeakMap();
+class AdvancedRobot extends Robot {
+    constructor() {
+        super(...arguments);
+        _AdvancedRobot_name.set(this, void 0);
     }
-    move(distance) {
-        console.log(`${this.name} is flying`);
-        super.move(distance);
+    getName() {
+        return __classPrivateFieldGet(this, _AdvancedRobot_name, "f");
     }
 }
-const robot = new Robot("John");
-robot.askName();
-const flyingRobot = new FlyingRobot("Jim", 2);
-flyingRobot.move(10);
-// console.log("Flying robot jetpack size is", flyingRobot.name);
-flyingRobot.name = "Kevin";
-console.log(`Hi, my name is ${flyingRobot.name}`);
+_AdvancedRobot_name = new WeakMap();
