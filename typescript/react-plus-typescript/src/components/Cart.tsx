@@ -18,6 +18,9 @@ class Cart extends React.Component<Props, State> {
 
   handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     console.log(e.target);
+    if ((e.target as HTMLElement).nodeName === "SPAN") {
+      e.target as HTMLSpanElement;
+    }
     this.setState((prevState) => ({ isOpen: !prevState.isOpen }));
   };
 
