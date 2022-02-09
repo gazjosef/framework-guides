@@ -36,6 +36,18 @@ body {
   font-weight: 400;
 }
 
+.heading-4 {
+  font-size: 1.9rem;
+}
+
+.heading-4__light {
+  color: #f9f7f6;
+}
+
+.heading-4__dark {
+  color: #54483a;
+}
+
 .sidebar {
   background-color: #c59963;
   grid-column: sidebar-start / sidebar-end;
@@ -62,10 +74,21 @@ body {
   grid-gap: 6rem;
 }
 
+.feature {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: min-content 1fr;
+      grid-template-columns: -webkit-min-content 1fr;
+      grid-template-columns: min-content 1fr;
+}
+
 .feature__icon {
   fill: #c59963;
   width: 4.5rem;
   height: 4.5rem;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
 }
 
 .feature__text {
