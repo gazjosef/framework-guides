@@ -150,12 +150,12 @@ body {
   padding-top: 4rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr min-content 6rem 1fr;
-      grid-template-rows: 1fr -webkit-min-content 6rem 1fr;
-      grid-template-rows: 1fr min-content 6rem 1fr;
-  -ms-grid-columns: max-content;
-      grid-template-columns: -webkit-max-content;
-      grid-template-columns: max-content;
+  -ms-grid-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+      grid-template-rows: 1fr -webkit-min-content minmax(6rem, -webkit-min-content) 1fr;
+      grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  -ms-grid-columns: minmax(min-content, max-content);
+      grid-template-columns: minmax(-webkit-min-content, -webkit-max-content);
+      grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -204,10 +204,14 @@ body {
       grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 3rem;
   justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__seenon-logos img {
-  height: 2.5rem;
+  max-height: 2.5rem;
+  max-width: 100%;
   -webkit-filter: brightness(70%);
           filter: brightness(70%);
 }
