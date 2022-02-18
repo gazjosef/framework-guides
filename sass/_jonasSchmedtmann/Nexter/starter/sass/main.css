@@ -50,9 +50,8 @@ body {
 
 @media only screen and (max-width: 50em) {
   .container {
-    -ms-grid-rows: 6rem calc(100vh - 6rem) min-content min-content 40vw (min-content)[3];
-        grid-template-rows: 6rem calc(100vh - 6rem) -webkit-min-content -webkit-min-content 40vw repeat(3, -webkit-min-content);
-        grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content 40vw repeat(3, min-content);
+    -ms-grid-rows: 6rem calc(100vh - 6rem);
+        grid-template-rows: 6rem calc(100vh - 6rem);
   }
 }
 
@@ -223,6 +222,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 37.5em) {
+  .header {
+    padding: 5rem;
+  }
+}
+
 .header__logo {
   height: 3rem;
   -ms-grid-column-align: center;
@@ -319,6 +324,14 @@ body {
   }
 }
 
+@media only screen and (max-width: 37.5em) {
+  .realtors__list {
+    -ms-grid-columns: min-content max-content;
+        grid-template-columns: -webkit-min-content -webkit-max-content;
+        grid-template-columns: min-content max-content;
+  }
+}
+
 .realtors__img {
   width: 7rem;
   border-radius: 50%;
@@ -374,6 +387,7 @@ body {
   grid-column: full-start / col-end 4;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(197, 153, 99, 0.5)), to(rgba(197, 153, 99, 0.5))), url(../img/back.jpg);
   background-image: linear-gradient(rgba(197, 153, 99, 0.5), rgba(197, 153, 99, 0.5)), url(../img/back.jpg);
+  background-size: cover;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[6];
@@ -383,6 +397,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (max-width: 50em) {
+  .story__pictures {
+    grid-column: 1 / -1;
+    padding: 6rem;
+  }
 }
 
 .story__img--1 {
@@ -397,6 +418,15 @@ body {
           box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
 }
 
+@media only screen and (max-width: 50em) {
+  .story__img--1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    grid-row: 1 / -1;
+  }
+}
+
 .story__img--2 {
   width: 115%;
   -ms-grid-row: 4;
@@ -408,6 +438,13 @@ body {
   z-index: 20;
   -webkit-box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 50em) {
+  .story__img--2 {
+    grid-row: 1 / -1;
+    width: 100%;
+  }
 }
 
 .story__content {
@@ -425,6 +462,15 @@ body {
   -ms-flex-line-pack: center;
       align-content: center;
   justify-items: start;
+}
+
+@media only screen and (max-width: 50em) {
+  .story__content {
+    grid-column: 1 / -1;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+  }
 }
 
 .story__text {
