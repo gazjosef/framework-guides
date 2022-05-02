@@ -1,4 +1,4 @@
-export class NumebersCollection {
+export class NumbersCollection {
   constructor(public data: number[]) {}
 
   get length(): number {
@@ -16,5 +16,5 @@ export class NumebersCollection {
   }
 }
 
-const collection = new NumebersCollection([1, 2, 3]);
+const collection = new NumbersCollection([1, 2, 3]);
 collection.length;
