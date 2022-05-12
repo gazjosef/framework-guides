@@ -117,7 +117,66 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/models/Model.ts":[function(require,module,exports) {
+})({"src/views/UserForm.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.UserForm = void 0;
+
+var UserForm =
+/** @class */
+function () {
+  function UserForm(parent, model) {
+    this.parent = parent;
+    this.model = model;
+  }
+
+  UserForm.prototype.eventsMap = function () {
+    return {
+      "click:.set-age": this.onSetAgeClick
+    };
+  };
+
+  UserForm.prototype.onSetAgeClick = function () {
+    console.log("button was clicked");
+  };
+
+  UserForm.prototype.template = function () {
+    return "\n      <div>\n          <h1>User Form</h1>\n          <div>User name: ".concat(this.model.get("name"), "</div>\n          <div>User age: ").concat(this.model.get("age"), "</div>\n          <input />\n          <button>Click Me</button>\n          <button class=\"set-age\">Set Random Age</button>\n      </div>\n    ");
+  };
+
+  UserForm.prototype.bindEvents = function (fragment) {
+    var eventsMap = this.eventsMap();
+
+    var _loop_1 = function _loop_1(eventKey) {
+      var _a = eventKey.split(":"),
+          eventName = _a[0],
+          selector = _a[1];
+
+      fragment.querySelectorAll(selector).forEach(function (element) {
+        element.addEventListener(eventName, eventsMap[eventKey]);
+      });
+    };
+
+    for (var eventKey in eventsMap) {
+      _loop_1(eventKey);
+    }
+  };
+
+  UserForm.prototype.render = function () {
+    var templateElement = document.createElement("template");
+    templateElement.innerHTML = this.template();
+    this.bindEvents(templateElement.content);
+    this.parent.append(templateElement.content);
+  };
+
+  return UserForm;
+}();
+
+exports.UserForm = UserForm;
+},{}],"src/models/Model.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4710,70 +4769,7 @@ function () {
 }();
 
 exports.Eventing = Eventing;
-},{}],"src/models/User.ts":[function(require,module,exports) {
-"use strict";
-
-var __extends = this && this.__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
-      __proto__: []
-    } instanceof Array && function (d, b) {
-      d.__proto__ = b;
-    } || function (d, b) {
-      for (var p in b) {
-        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
-      }
-    };
-
-    return _extendStatics(d, b);
-  };
-
-  return function (d, b) {
-    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-
-    _extendStatics(d, b);
-
-    function __() {
-      this.constructor = d;
-    }
-
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-  };
-}();
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.User = void 0;
-
-var Model_1 = require("./Model");
-
-var Attributes_1 = require("./Attributes");
-
-var ApiSync_1 = require("./ApiSync");
-
-var Eventing_1 = require("./Eventing");
-
-var rootUrl = "http://localhost:3000/users";
-
-var User =
-/** @class */
-function (_super) {
-  __extends(User, _super);
-
-  function User() {
-    return _super !== null && _super.apply(this, arguments) || this;
-  }
-
-  User.buildUser = function (attrs) {
-    return new User(new Attributes_1.Attributes(attrs), new Eventing_1.Eventing(), new ApiSync_1.ApiSync(rootUrl));
-  };
-
-  return User;
-}(Model_1.Model);
-
-exports.User = User;
-},{"./Model":"src/models/Model.ts","./Attributes":"src/models/Attributes.ts","./ApiSync":"src/models/ApiSync.ts","./Eventing":"src/models/Eventing.ts"}],"src/models/Collection.ts":[function(require,module,exports) {
+},{}],"src/models/Collection.ts":[function(require,module,exports) {
 "use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {
@@ -4831,25 +4827,95 @@ function () {
 }();
 
 exports.Collection = Collection;
-},{"axios":"node_modules/axios/index.js","./Eventing":"src/models/Eventing.ts"}],"src/index.ts":[function(require,module,exports) {
+},{"axios":"node_modules/axios/index.js","./Eventing":"src/models/Eventing.ts"}],"src/models/User.ts":[function(require,module,exports) {
+"use strict";
+
+var __extends = this && this.__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  };
+
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}();
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.User = void 0;
+
+var Model_1 = require("./Model");
+
+var Attributes_1 = require("./Attributes");
+
+var ApiSync_1 = require("./ApiSync");
+
+var Eventing_1 = require("./Eventing");
+
+var Collection_1 = require("./Collection");
+
+var rootUrl = "http://localhost:3000/users";
+
+var User =
+/** @class */
+function (_super) {
+  __extends(User, _super);
+
+  function User() {
+    return _super !== null && _super.apply(this, arguments) || this;
+  }
+
+  User.buildUser = function (attrs) {
+    return new User(new Attributes_1.Attributes(attrs), new Eventing_1.Eventing(), new ApiSync_1.ApiSync(rootUrl));
+  };
+
+  User.buildUserCollection = function () {
+    return new Collection_1.Collection(rootUrl, function (json) {
+      return User.buildUser(json);
+    });
+  };
+
+  return User;
+}(Model_1.Model);
+
+exports.User = User;
+},{"./Model":"src/models/Model.ts","./Attributes":"src/models/Attributes.ts","./ApiSync":"src/models/ApiSync.ts","./Eventing":"src/models/Eventing.ts","./Collection":"src/models/Collection.ts"}],"src/index.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var UserForm_1 = require("./views/UserForm");
+
 var User_1 = require("./models/User");
 
-var Collection_1 = require("./models/Collection");
-
-var collection = new Collection_1.Collection("http://localhost:3000/users", function (json) {
-  return User_1.User.buildUser(json);
+var user = User_1.User.buildUser({
+  name: "NAME",
+  age: 20
 });
-collection.on("change", function () {
-  console.log(collection);
-});
-collection.fetch();
-},{"./models/User":"src/models/User.ts","./models/Collection":"src/models/Collection.ts"}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var userForm = new UserForm_1.UserForm(document.getElementById("root"), user);
+userForm.render();
+},{"./views/UserForm":"src/views/UserForm.ts","./models/User":"src/models/User.ts"}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -4877,7 +4943,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51205" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58158" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
