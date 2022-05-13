@@ -17,13 +17,10 @@ body {
 
 .square {
   width: 150px;
-  height: 150px;
+  height: 20vh;
   background-color: fuchsia;
 }
 
-.square2 {
-  margin-top: 300px;
-  width: 150px;
-  height: 150px;
-  background-color: blue;
+.red {
+  background-color: red;
 }
