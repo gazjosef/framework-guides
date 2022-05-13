@@ -1,13 +1,19 @@
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".square", {
-  //   x: 700,
-  duration: 3,
+  x: 1000,
+  duration: 8,
   scrollTrigger: {
     trigger: ".square",
-    start: "top 30%",
-    end: () => `+=${document.querySelector(".square").offsetHeight}`,
-    markers: true,
-    toggleClass: "red",
+    start: "top 60%",
+    end: "top 40%",
+    toggleActions: "restart pause resume complete",
+    // ^ OnEnter, onLeave, OnEnterBack, onLeaveBack
+    // play pause reverse restart reset complete none
+    markers: {
+      startColor: "purple",
+      endColor: "fuchsia",
+      fontSize: "3rem",
+    },
   },
 });
