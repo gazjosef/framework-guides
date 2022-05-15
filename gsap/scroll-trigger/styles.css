@@ -2,31 +2,8 @@ body {
   margin: 0;
 }
 
-.div1,
-.div2 {
-  height: 100vh;
-}
-
-.div1 {
-  background-color: pink;
-}
-
-.div2 {
-  /* background-color: salmon; */
-}
-
-.square {
-  width: 150px;
-  height: 20vh;
-  background-color: fuchsia;
-}
-
-.square2 {
-  width: 150px;
-  height: 20vh;
-  background-color: green;
-}
-
-.red {
-  background-color: red;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
 }
