@@ -2,13 +2,17 @@ body {
   margin: 0;
 }
 
+.panel {
+  height: 100vh;
+  background-color: beige;
+}
+
 .box {
   width: 100px;
   height: 100px;
   background-color: blue;
 }
 
-.panel {
-  height: 100vh;
-  background-color: pink;
+.box-red {
+  background-color: Red;
 }
