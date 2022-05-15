@@ -1,8 +1,8 @@
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.create({
-  trigger: ".box",
-  start: "top 80%",
-  end: "top 50%",
-  markers: "true",
+  //   markers: "true",
+  start: "top 6%",
+  trigger: ".panel",
+  toggleClass: { targets: "nav", className: "nav-active" },
 });
