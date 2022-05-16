@@ -149,10 +149,21 @@ var View = /*#__PURE__*/function () {
 
     this.parent = parent;
     this.model = model;
+    this.regions = {};
     this.bindModel();
   }
 
   _createClass(View, [{
+    key: "regionsMap",
+    value: function regionsMap() {
+      return {};
+    }
+  }, {
+    key: "eventsMap",
+    value: function eventsMap() {
+      return {};
+    }
+  }, {
     key: "bindModel",
     value: function bindModel() {
       var _this = this;
@@ -182,12 +193,27 @@ var View = /*#__PURE__*/function () {
       }
     }
   }, {
+    key: "mapRegions",
+    value: function mapRegions(fragment) {
+      var regionsMap = this.regionsMap();
+
+      for (var key in regionsMap) {
+        var selector = regionsMap[key];
+        var element = fragment.querySelector(selector);
+
+        if (element) {
+          this.regions[key] = element;
+        }
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       this.parent.innerHTML = "";
       var templateElement = document.createElement("template");
       templateElement.innerHTML = this.template();
       this.bindEvents(templateElement.content);
+      this.mapRegions(templateElement.content);
       this.parent.append(templateElement.content);
     }
   }]);
@@ -196,7 +222,7 @@ var View = /*#__PURE__*/function () {
 }();
 
 exports.View = View;
-},{}],"src/views/UserForm.ts":[function(require,module,exports) {
+},{}],"src/views/UserEdit.ts":[function(require,module,exports) {
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -224,65 +250,40 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.UserForm = void 0;
+exports.UserEdit = void 0;
 
 var View_1 = require("./View");
 
-var UserForm = /*#__PURE__*/function (_View_1$View) {
-  _inherits(UserForm, _View_1$View);
+var UserEdit = /*#__PURE__*/function (_View_1$View) {
+  _inherits(UserEdit, _View_1$View);
 
-  var _super = _createSuper(UserForm);
+  var _super = _createSuper(UserEdit);
 
-  function UserForm() {
-    var _this;
+  function UserEdit() {
+    _classCallCheck(this, UserEdit);
 
-    _classCallCheck(this, UserForm);
-
-    _this = _super.apply(this, arguments);
-
-    _this.onSaveClick = function () {
-      _this.model.save();
-    };
-
-    _this.onSetNameClick = function () {
-      var input = _this.parent.querySelector("input");
-
-      if (input) {
-        var name = input.value;
-
-        _this.model.set({
-          name: name
-        });
-      }
-    };
-
-    _this.onSetAgeClick = function () {
-      _this.model.setRandomAge();
-    };
-
-    return _this;
+    return _super.apply(this, arguments);
   }
 
-  _createClass(UserForm, [{
-    key: "eventsMap",
-    value: function eventsMap() {
+  _createClass(UserEdit, [{
+    key: "regionsMap",
+    value: function regionsMap() {
       return {
-        "click:.set-age": this.onSetAgeClick,
-        "click:.set-name": this.onSetNameClick,
-        "click:.save-model": this.onSaveClick
+        userShow: ".user-show",
+        userForm: ".user-form"
       };
     }
   }, {
     key: "template",
     value: function template() {
-      return "\n      <div>\n          <input placeholder=\"".concat(this.model.get("name"), "\" />\n          <button class=\"set-name\">Change Name</button>\n          <button class=\"set-age\">Set Random Age</button>\n          <button class=\"save-model\">Save User</button>\n      </div>\n    ");
+      return "\n        <div>\n            <div class=\"user-show\">\n\n            </div>\n            <div class=\"user-form\">\n\n            </div>\n        </div>\n    ";
     }
   }]);
 
-  return UserForm;
+  return UserEdit;
 }(View_1.View);
 
-exports.UserForm = UserForm;
+exports.UserEdit = UserEdit;
 },{"./View":"src/views/View.ts"}],"src/models/Model.ts":[function(require,module,exports) {
 "use strict";
 
@@ -5019,7 +5020,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var UserForm_1 = require("./views/UserForm");
+var UserEdit_1 = require("./views/UserEdit");
 
 var User_1 = require("./models/User");
 
@@ -5030,12 +5031,13 @@ var user = User_1.User.buildUser({
 var root = document.getElementById("root");
 
 if (root) {
-  var userForm = new UserForm_1.UserForm(root, user);
-  userForm.render();
+  var userEdit = new UserEdit_1.UserEdit(root, user);
+  userEdit.render();
+  console.log(userEdit);
 } else {
   throw new Error("Root element not found");
 }
-},{"./views/UserForm":"src/views/UserForm.ts","./models/User":"src/models/User.ts"}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./views/UserEdit":"src/views/UserEdit.ts","./models/User":"src/models/User.ts"}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
