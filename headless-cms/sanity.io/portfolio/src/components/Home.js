@@ -1,11 +1,18 @@
 import React from "react";
+import image from "../monstera-leaves.jpg";
 
 export default function Home() {
   return (
     <main>
-      <img alt="img" />
-      <section>
-        <h1>Aloho. I'm Kapehe</h1>
+      <img
+        alt="Monstera Leaves"
+        src={image}
+        className="absolute object-cover w-full h-full"
+      />
+      <section className="relative flex justify-center min-h-screen pt-12 lg:pt-64 px-8">
+        <h1 className="text-6xl text-green-100 font-bold cursive leading-none lg:leading-snug home-name">
+          Aloho. I'm Kapehe
+        </h1>
       </section>
     </main>
   );
