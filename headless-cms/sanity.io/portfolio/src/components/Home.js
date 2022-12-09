@@ -1,5 +1,12 @@
 import React from "react";
 
 export default function Home() {
-  return <h1>Home Page!</h1>;
+  return (
+    <main>
+      <img alt="img" />
+      <section>
+        <h1>Aloho. I'm Kapehe</h1>
+      </section>
+    </main>
+  );
 }
