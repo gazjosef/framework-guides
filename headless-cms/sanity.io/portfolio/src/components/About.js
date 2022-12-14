@@ -27,6 +27,15 @@ export default function About() {
 
   if (!author) return <div>Loading...</div>;
 
+  const components = {
+    listItem: {
+      // Ex. 1: customizing common list types
+      bullet: ({ children }) => (
+        <li style={{ listStyleType: "disclosure-closed" }}>{children}</li>
+      ),
+    },
+  };
+
   return (
     <main className="relative">
       <img src={plumeria} alt="Plumeria Flower" className="absolute w-full" />
@@ -47,6 +56,7 @@ export default function About() {
                 value={author.bio}
                 projectId="99bvujhe"
                 dataset="production"
+                components={components}
               />
             </div>
           </div>
