@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import { PortableText } from "@portabletext/react";
+import sanityClient from "../client.js";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
