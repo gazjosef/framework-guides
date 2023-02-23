@@ -1,0 +1,116 @@
+:root {
+  --clr-primary-100: hsl(14, 100%, 80%);
+  --clr-primary-200: hsl(14, 100%, 70%);
+  --clr-primary-300: hsl(14, 100%, 60%);
+  --clr-primary-400: hsl(14, 100%, 43%);
+  --clr-primary-500: hsl(14, 100%, 20%);
+  --clr-article-100: hsl(219, 89%, 80%);
+  --clr-article-200: hsl(219, 89%, 70%);
+  --clr-article-300: hsl(219, 89%, 60%);
+  --clr-article-400: hsl(219, 61%, 37%);
+  --clr-article-500: hsl(219, 89%, 20%);
+  --clr-youtube-100: hsl(345, 88%, 80%);
+  --clr-youtube-200: hsl(345, 88%, 70%);
+  --clr-youtube-300: hsl(345, 88%, 60%);
+  --clr-youtube-400: hsl(345, 88%, 46%);
+  --clr-youtube-500: hsl(345, 88%, 20%);
+  --clr-course-100: hsl(176, 66%, 70%);
+  --clr-course-200: hsl(176, 66%, 60%);
+  --clr-course-300: hsl(176, 66%, 40%);
+  --clr-course-400: hsl(176, 66%, 30%);
+  --clr-course-500: hsl(176, 66%, 20%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(0, 0%, 87%);
+  --clr-neutral-300: hsl(0, 0%, 80%);
+  --clr-neutral-700: hsl(0, 0%, 40%);
+  --clr-neutral-800: hsl(0, 0%, 30%);
+  --clr-neutral-900: hsl(0, 0%, 15%);
+}
+
+/*
+0 - 600px:    Phone
+600 - 900px:  Tablet Portrait
+900 - 1200px:  Tablet Landscape
+(1200 - 1800) is where our normal styles apply
+1800px+:       Big Desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + Typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: darkgrey;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #000;
+  padding: 3rem;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+}
+.paragraph:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row [class^=col-] {
+  float: left;
+}
+.row [class^=col-]:not(:last-child) {
+  margin-right: 6rem;
+}
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+.row .col-1-of-3 {
+  width: calc((100% - 6rem * 2) / 3);
+}
+.row .col-2-of-3 {
+  width: calc(2 * ((100% - 6rem * 2) / 3) + 6rem);
+}
+.row .col-1-of-4 {
+  width: calc((100% - 6rem * 3) / 4);
+}
+.row .col-2-of-4 {
+  width: calc(2 * ((100% - 6rem * 3) / 4) + 6rem);
+}
+.row .col-3-of-4 {
+  width: calc(3 * (100% - 6rem * 3) / 4 + (2 * 6rem));
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,11 @@
+@use "generator/colors" as *;
+@use "generator/media-queries";
+@use "generator/type-scale";
+
+:root {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+}
