@@ -1,11 +1,55 @@
 @use "generator/colors" as *;
+@use "generator/numbers" as *;
 @use "generator/media-queries";
 @use "generator/type-scale";
 
 :root {
+  // * COLOR
+
   @each $color, $shades in $colors {
     @each $shade, $value in $shades {
       --clr-#{$color}-#{$shade}: #{$value};
     }
+  }
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --bg-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  // * MARGIN
+
+  @each $number, $value in $numbers {
+    --mt-#{$number}: #{$value};
+  }
+
+  @each $number, $value in $numbers {
+    --mb-#{$number}: #{$value};
+  }
+
+  @each $number, $value in $numbers {
+    --ml-#{$number}: #{$value};
+  }
+
+  @each $number, $value in $numbers {
+    --mr-#{$number}: #{$value};
+  }
+
+  // * PADDING
+
+  @each $number, $value in $numbers {
+    --pt-#{$number}: #{$value};
+  }
+
+  @each $number, $value in $numbers {
+    --pb-#{$number}: #{$value};
+  }
+
+  @each $number, $value in $numbers {
+    --pl-#{$number}: #{$value};
+  }
+
+  @each $number, $value in $numbers {
+    --pr-#{$number}: #{$value};
   }
 }
