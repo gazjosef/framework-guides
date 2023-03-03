@@ -1,55 +1,187 @@
 @use "generator/colors" as *;
+@use "generator/fonts" as *;
 @use "generator/numbers" as *;
-@use "generator/media-queries";
-@use "generator/type-scale";
+// @use "generator/media-queries";
+// @use "generator/type-scale";
+
+// * COLOR
 
 :root {
-  // * COLOR
-
   @each $color, $shades in $colors {
     @each $shade, $value in $shades {
       --clr-#{$color}-#{$shade}: #{$value};
     }
   }
-  @each $color, $shades in $colors {
-    @each $shade, $value in $shades {
-      --bg-#{$color}-#{$shade}: #{$value};
+}
+
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .u-clr-#{$color}-#{$shade} {
+      color: #{$value};
     }
   }
+}
 
-  // * MARGIN
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .u-bg-#{$color}-#{$shade} {
+      background-color: #{$value};
+    }
+  }
+}
 
-  @each $number, $value in $numbers {
-    --mt-#{$number}: #{$value};
+// * FONTS
+
+:root {
+  @each $size, $value in $font-size {
+    --fs-#{$size}: #{$value};
   }
 
-  @each $number, $value in $numbers {
-    --mb-#{$number}: #{$value};
+  @each $weight, $value in $font-weights {
+    --fw-#{$weight}: #{$value};
   }
+}
 
-  @each $number, $value in $numbers {
-    --ml-#{$number}: #{$value};
+@each $size, $value in $font-size {
+  .u-fs-#{$size} {
+    font-size: #{$value}rem;
   }
+}
 
-  @each $number, $value in $numbers {
-    --mr-#{$number}: #{$value};
+@each $weight, $value in $font-weights {
+  .u-fw-#{$weight} {
+    font-weight: #{$value};
   }
+}
 
-  // * PADDING
+// * MARGIN
 
-  @each $number, $value in $numbers {
-    --pt-#{$number}: #{$value};
+@each $size, $value in $box-sizes {
+  .u-mt-#{$size} {
+    @if not(type-of($value) == "number") {
+      margin-top: #{$value};
+    } @else {
+      margin-top: #{$value}rem;
+    }
   }
+}
 
-  @each $number, $value in $numbers {
-    --pb-#{$number}: #{$value};
+@each $size, $value in $box-sizes {
+  .u-mb-#{$size} {
+    @if not(type-of($value) == "number") {
+      margin-bottom: #{$value};
+    } @else {
+      margin-bottom: #{$value}rem;
+    }
   }
+}
 
-  @each $number, $value in $numbers {
-    --pl-#{$number}: #{$value};
+@each $size, $value in $box-sizes {
+  .u-ml-#{$size} {
+    @if not(type-of($value) == "number") {
+      margin-left: #{$value};
+    } @else {
+      margin-left: #{$value}rem;
+    }
   }
+}
 
-  @each $number, $value in $numbers {
-    --pr-#{$number}: #{$value};
+@each $size, $value in $box-sizes {
+  .u-mr-#{$size} {
+    @if not(type-of($value) == "number") {
+      margin-right: #{$value};
+    } @else {
+      margin-right: #{$value}rem;
+    }
+  }
+}
+
+@each $size, $value in $box-sizes {
+  .u-mx-#{$size} {
+    @if not(type-of($value) == "number") {
+      margin-left: #{$value};
+      margin-right: #{$value};
+    } @else {
+      margin-left: #{$value}rem;
+      margin-right: #{$value}rem;
+    }
+  }
+}
+
+@each $size, $value in $box-sizes {
+  .u-my-#{$size} {
+    @if not(type-of($value) == "number") {
+      margin-top: #{$value};
+      margin-bottom: #{$value};
+    } @else {
+      margin-top: #{$value}rem;
+      margin-bottom: #{$value}rem;
+    }
+  }
+}
+
+// * PADDING
+
+@each $size, $value in $box-sizes {
+  .u-pt-#{$size} {
+    @if not(type-of($value) == "number") {
+      padding-top: #{$value};
+    } @else {
+      padding-top: #{$value}rem;
+    }
+  }
+}
+
+@each $size, $value in $box-sizes {
+  .u-pb-#{$size} {
+    @if not(type-of($value) == "number") {
+      padding-bottom: #{$value};
+    } @else {
+      padding-bottom: #{$value}rem;
+    }
+  }
+}
+
+@each $size, $value in $box-sizes {
+  .u-pl-#{$size} {
+    @if not(type-of($value) == "number") {
+      padding-left: #{$value};
+    } @else {
+      padding-left: #{$value}rem;
+    }
+  }
+}
+
+@each $size, $value in $box-sizes {
+  .u-pr-#{$size} {
+    @if not(type-of($value) == "number") {
+      padding-right: #{$value};
+    } @else {
+      padding-right: #{$value}rem;
+    }
+  }
+}
+
+@each $size, $value in $box-sizes {
+  .u-px-#{$size} {
+    @if not(type-of($value) == "number") {
+      padding-left: #{$value};
+      padding-right: #{$value};
+    } @else {
+      padding-left: #{$value}rem;
+      padding-right: #{$value}rem;
+    }
+  }
+}
+
+@each $size, $value in $box-sizes {
+  .u-py-#{$size} {
+    @if not(type-of($value) == "number") {
+      padding-top: #{$value};
+      padding-bottom: #{$value};
+    } @else {
+      padding-top: #{$value}rem;
+      padding-bottom: #{$value}rem;
+    }
   }
 }
