@@ -62,7 +62,7 @@ const Current = ({ currentForecast, city, country }) => {
         </div>
       </section>
       {/* SECONDARY WINDOW */}
-      <section className="h-[40px] border-t-2 border-solid | flex">
+      <section className="h-[40px] border-t-[1px] border-solid | flex">
         <section className="w-full | flex items-center justify-center">
           <div className="mr-[15px]">
             <FaWind fontSize="1.5rem" />
@@ -84,7 +84,7 @@ const Current = ({ currentForecast, city, country }) => {
         </section>
       </section>
 
-      <section className="h-[40px] border-t-2 border-solid | flex">
+      <section className="h-[40px] border-t-[1px] border-solid | flex">
         <section className="w-full | flex items-center justify-center">
           <div className="mr-[15px]">
             <FaWater fontSize="1.5rem" />
