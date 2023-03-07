@@ -1,32 +1,18 @@
 import { useState, useEffect } from "react";
 import { IconContext } from "react-icons";
 import { FaSearch } from "react-icons/fa";
-import {
-  WiDaySunny,
-  WiNightClear,
-  WiDaySunnyOvercast,
-  WiNightPartlyCloudy,
-  WiCloud,
-  WiDayCloudy,
-  WiNightCloudy,
-  WiRain,
-  WiDayShowers,
-  WiNightShowers,
-  WiThunderstorm,
-  WiSnow,
-  WiFog,
-} from "react-icons/wi";
 
 import Current from "./Forecast/Current";
 import Future from "./Forecast/Future";
+// import SearchBar from "./SearchBar";
 
 const API_KEY = process.env.NEXT_PUBLIC_OPEN_WEATHER_API_KEY;
 
 const WeatherApp = () => {
-  // Get Current Forecast
   const [city, setCity] = useState("sydney");
   const [country, setCountry] = useState("au");
-  const [data, setData] = useState({
+
+  const [currentForecast, setCurrentForecast] = useState({
     base: "stations",
     clouds: {
       all: null,
@@ -74,74 +60,35 @@ const WeatherApp = () => {
     },
   });
 
-  // Get Daily Forecast
-  const [fiveHour, setFiveHour] = useState([]);
+  const [futureForecast, setFutureForecast] = useState([]);
 
   useEffect(() => {
-    const setWeather = async (e) => {
-      // e.preventDefault();
+    const getCurrentData = async (e) => {
       const api_call = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`
       );
       const data = await api_call.json();
 
-      setData(data);
+      setCurrentForecast(data);
 
-      console.log("Get Weather Data", data);
-
-      //   setCity(data.name);
-      //   setCountry(data.sys.country);
+      console.log("Set Weather Data", data);
     };
-    setWeather();
+    getCurrentData();
   }, [city, country]);
 
   useEffect(() => {
-    const setHourForecast = async (e) => {
+    const getFutureData = async (e) => {
       const api_call = await fetch(
         `https://api.openweathermap.org/data/2.5/forecast?q=sydney,nsw&appid=${API_KEY}`
       );
-      const fiveHourData = await api_call.json();
-      console.log("Get Hour Data", fiveHourData.list.slice(0, 5));
+      const futureData = await api_call.json();
 
-      setFiveHour(fiveHourData.list.slice(0, 5));
+      setFutureForecast(futureData.list.slice(0, 5));
+
+      console.log("Get Future Data", futureData.list.slice(0, 5));
     };
-    setHourForecast();
+    getFutureData();
   }, []);
-
-  const iconConverter = (icon) => {
-    const convertIcon = {
-      "01d": <WiDaySunny />,
-      "02d": <WiDaySunnyOvercast />,
-      "03d": <WiCloud />,
-      "04d": <WiDayCloudy />,
-      "09d": <WiRain />,
-      "10d": <WiDayShowers />,
-      "11d": <WiThunderstorm />,
-      "13d": <WiSnow />,
-      "50d": <WiFog />,
-      "01n": <WiNightClear />,
-      "02n": <WiNightPartlyCloudy />,
-      "03n": <WiCloud />,
-      "04n": <WiNightCloudy />,
-      "09n": <WiRain />,
-      "10n": <WiNightShowers />,
-      "11n": <WiThunderstorm />,
-      "13n": <WiSnow />,
-      "50n": <WiFog />,
-    };
-    return convertIcon[icon];
-  };
-
-  const timeConverter = (UNIX_timestamp) => {
-    let a = new Date(UNIX_timestamp * 1000);
-
-    let hour = a.getHours();
-    let min = ("0" + a.getMinutes()).slice(-2);
-    // let sec = a.getSeconds();
-    let time = hour + ":" + min;
-
-    return time;
-  };
 
   const getWeather = async (e) => {
     e.preventDefault();
@@ -152,23 +99,26 @@ const WeatherApp = () => {
     const api_call = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`
     );
-    const data = await api_call.json();
+    const currentForecastData = await api_call.json();
 
-    console.log("Get Weather Data", data);
-    console.log("clicked");
+    console.log("Get Current Forecast Data", currentForecastData);
 
-    setData(data);
+    setCurrentForecast(currentForecastData);
 
-    setCity(data.name);
-    setCountry(data.sys.country);
+    setCity(currentForecastData.name);
+    setCountry(currentForecastData.sys.country);
 
     const api_call2 = await fetch(
       `https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&appid=${API_KEY}`
     );
-    const fiveHourData = await api_call2.json();
-    console.log("Get Hour Data", fiveHourData.list.slice(0, 5));
+    const futureForecastData = await api_call2.json();
 
-    setFiveHour(fiveHourData.list.slice(0, 5));
+    console.log(
+      "Get Future Forecast Data",
+      futureForecastData.list.slice(0, 5)
+    );
+
+    setFutureForecast(futureForecastData.list.slice(0, 5));
   };
 
   return (
@@ -197,10 +147,14 @@ const WeatherApp = () => {
           </IconContext.Provider>
         </button>
       </form>
+      {/* <SearchBar /> */}
+      <Current
+        currentForecast={currentForecast}
+        city={city}
+        country={country}
+      />
 
-      <Current />
-
-      <Future />
+      <Future futureForecast={futureForecast} />
     </div>
   );
 };
