@@ -17,11 +17,11 @@ const Future = ({ futureForecast }) => {
     return (
       <div
         key={index}
-        className="hour | bg-sky-500 w-[35px] h-[70px] p-[5px] border-solid rounded-[10px] | flex flex-col items-center justify-between | text-white"
+        className="hour | bg-sky-500 w-[35px] h-[70px] p-[5px] border-solid rounded-[10px] | flex flex-col items-center justify-between | text-[9px] text-white"
       >
         <div>{timeConverter(hour.dt)}</div>
 
-        <IconContext.Provider value={{ className: "text-[25px]" }}>
+        <IconContext.Provider value={{ className: "text-[30px]" }}>
           {iconConverter(hour.weather[0].icon)}
         </IconContext.Provider>
 

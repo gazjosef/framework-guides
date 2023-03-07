@@ -10,8 +10,6 @@ import { iconConverter } from "../iconConverter";
 
 const Current = ({ currentForecast, city, country }) => {
   const [time, setTime] = useState();
-  // const [time, setTime] = useState(new Date());
-  console.log("time", time);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,7 +20,6 @@ const Current = ({ currentForecast, city, country }) => {
   }, []);
 
   const currentDate = new Date(time);
-
   const options = { month: "long", day: "numeric" };
 
   const directionConverter = (degrees) => {
@@ -41,25 +38,23 @@ const Current = ({ currentForecast, city, country }) => {
       <section className="h-[170px] p-[15px] | grid grid-cols-2	">
         <div>
           <IconContext.Provider
-            value={{ className: "text-[100px] text-white" }}
+            value={{
+              className: "font-semibold	text-[100px] text-white",
+            }}
           >
             {iconConverter(currentForecast.weather[0].icon)}
           </IconContext.Provider>
 
           <span className="text-center uppercase">
-            <h2>
+            <h2 className="font-semibold	text-[14px] text text-center">
               {city}, {country}
             </h2>
           </span>
         </div>
 
-        <div className="flex flex-col items-center justify-center">
-          <h2>
-            {time && currentDate.toLocaleTimeString()}
-            <br />
-            {time && currentDate.toLocaleDateString(undefined, options)}
-            <br />
-          </h2>
+        <div className="flex flex-col items-center justify-center | text-[14px] text-center">
+          <h2>{time && currentDate.toLocaleTimeString()}</h2>
+          <h2>{time && currentDate.toLocaleDateString(undefined, options)}</h2>
           <span className="text-[25px]">
             <h2>{Math.floor(currentForecast.main.temp)}&#8451;</h2>
           </span>
@@ -77,6 +72,7 @@ const Current = ({ currentForecast, city, country }) => {
             <div>{currentForecast.wind.speed} km/h</div>
           </div>
         </section>
+
         <section className="w-full | flex items-center justify-center">
           <section className="mr-[15px]">
             <FaThermometerHalf fontSize="1.5rem" />
@@ -87,6 +83,7 @@ const Current = ({ currentForecast, city, country }) => {
           </div>
         </section>
       </section>
+
       <section className="h-[40px] border-t-2 border-solid | flex">
         <section className="w-full | flex items-center justify-center">
           <div className="mr-[15px]">
@@ -97,6 +94,7 @@ const Current = ({ currentForecast, city, country }) => {
             <div>{currentForecast.main.humidity} %</div>
           </div>
         </section>
+
         <section className="w-full | flex items-center justify-center">
           <div className="mr-[15px]">
             <FaChartLine fontSize="1.5rem" />
