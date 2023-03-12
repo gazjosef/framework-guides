@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { Meta } from "@/components/Meta";
-// import Navbar from "@/components/Layout/Navbar/Navbar";
-import { Footer } from "@/components/Layout/Footer";
+import Footer from "@/components/Layout/Footer";
 import Header from "@/components/Layout/Header";
 
 export const Layout = ({ children }) => {
@@ -13,15 +12,13 @@ export const Layout = ({ children }) => {
         <Meta />
       </header>
 
-      {/* <Navbar /> */}
-
-      {/* <Header /> */}
+      <Header />
 
       {router.pathname === "/"}
 
       <main>{children}</main>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

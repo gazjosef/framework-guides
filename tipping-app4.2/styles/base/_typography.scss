@@ -5,10 +5,9 @@ $ff-secondary: "Raleway", sans-serif;
 $ff-body: $ff-primary;
 $ff-heading: $ff-primary;
 
-$fs-body: clamp(1.75rem, 1.8vw, 2rem);
 $fs-primary-heading: clamp(2.5rem, 3vw, 3.5rem);
-$fs-secondary-heading: var(--fs-700);
-$fs-nav: clamp(1.6rem, 1.8vw, 2rem);
+$fs-secondary-heading: clamp(2.25rem, 2.5vw, 2.75rem);
+$fs-body: clamp(1.75rem, 1.8vw, 2rem);
 $fs-button: var(--fs-300);
 
 body {
@@ -20,8 +19,6 @@ body {
 }
 
 .primary-heading {
-  max-width: 30ch;
-
   font-size: $fs-primary-heading;
   font-weight: var(--fw-semi-bold);
 }
@@ -29,19 +26,13 @@ body {
 .secondary-heading {
   color: var(--clr-neutral-400);
   font-family: $ff-secondary;
-  font-size: clamp(2.25rem, 2.5vw, 2.75rem);
+  font-size: $fs-secondary-heading;
   font-weight: var(--fw-semi-bold);
   letter-spacing: 0.4rem;
   text-transform: uppercase;
 }
 
 .paragraph {
-  max-width: 45ch;
-
-  font-size: $fs-body;
-  line-height: 2;
-  text-align: justify;
-
   &:not(:last-child) {
     margin-bottom: 3rem;
   }

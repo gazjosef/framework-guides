@@ -1,0 +1,26 @@
+.hero {
+  // * Vertical Line
+  flex-direction: row;
+
+  &:before {
+    content: "";
+    border: 1px dotted #d3d3d3;
+    align-self: stretch;
+  }
+
+  &__item {
+    min-height: 20rem;
+    flex: 1;
+
+    &--start {
+      order: -1;
+    }
+
+    // &--end {
+    // }
+  }
+
+  @include respond(sm) {
+    flex-direction: column;
+  }
+}

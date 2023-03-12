@@ -12,18 +12,34 @@
   flex-direction: row;
 }
 
+.u-items-start {
+  align-items: flex-start !important;
+}
+
 .u-items-center {
-  align-items: center;
+  align-items: center !important;
+}
+
+.u-items-end {
+  align-items: flex-end !important;
 }
 
 .u-justify-center {
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .u-justify-between {
-  justify-content: space-between;
+  justify-content: space-between !important;
 }
 
 .u-justify-items-end {
-  justify-items: end;
+  justify-items: flex-end !important;
+}
+
+.u-self-start {
+  align-self: flex-start !important;
+}
+
+.u-self-end {
+  align-self: flex-end !important;
 }

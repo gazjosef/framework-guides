@@ -14,9 +14,9 @@ export const Meta = ({ title, keywords, description }) => {
 };
 
 Meta.defaultProps = {
-  title: "Ant Software Dev | Embiggened Innovation",
+  title: "Tipping App",
   keywords:
-    "software development, web development, custom software, mobile app development, IT services, software consulting, web design, e-commerce development, cloud computing, agile development, front-end development, back-end development, full-stack development, responsive design, SEO services",
+    "Office sports tipping app, Workplace sports betting, Sports prediction app, Sports tipping competition, Office sports league, Sports betting among colleagues, Friendly sports betting, Sports odds and statistics, Sports betting app, Leaderboard for sports tipping",
   description:
-    "Get scalable, modern and reliable custom software and let your business grow.",
+    "An office sports tipping app is a mobile application designed to facilitate friendly sports betting among colleagues in the workplace.",
 };
