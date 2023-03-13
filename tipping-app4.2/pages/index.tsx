@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Login from "../components/Section/Login";
+import Demo from "../components/Section/Demo";
 import Register from "../components/Section/Register";
 
 export default function Home() {
@@ -14,19 +15,14 @@ export default function Home() {
 
       <main>
         <section className="section">
-          <div className="container | u-bg-neutral-400 u-px-5 u-py-5">
-            <div className="hero | u-mx-auto | u-flex u-items-center u-justify-between u-gap-2">
-              <div className="hero__item hero__item--start | u-bg-neutral-500 | u-flex u-items-end">
+          <div className="container | u-px-5 u-py-5">
+            <div className="hero | u-bg-neutral-500 u-mx-auto | u-flex u-items-center u-justify-between u-gap-2">
+              <div className="hero__item hero__item--start |  | u-flex  u-justify-center">
                 <Login />
                 {/* <Register /> */}
               </div>
-              <div className="hero__item hero__item--end | u-bg-neutral-700 | u-flex  u-items-end">
-                <div>
-                  <p>Sign-in with Guest account</p>
-                  <button className="btn btn--cta | u-mb-1 u-ml-2">
-                    Guest
-                  </button>
-                </div>
+              <div className="hero__item hero__item--end | u-flex  u-justify-center">
+                <Demo />
               </div>
             </div>
           </div>

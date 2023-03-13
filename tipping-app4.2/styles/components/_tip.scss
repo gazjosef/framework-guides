@@ -1,0 +1,29 @@
+.tip {
+  border: 1px solid var(--clr-white-0);
+  width: 50vw;
+  height: 7rem;
+
+  text-align: center;
+
+  &__home,
+  &__away {
+    display: flex;
+
+    & > * {
+      min-width: 6rem;
+      margin-inline: 1rem;
+
+      display: grid;
+      place-content: center;
+    }
+  }
+
+  &__details {
+    font-size: 1rem;
+  }
+
+  &__logo {
+    max-width: 6rem;
+    max-height: 4.5rem;
+  }
+}

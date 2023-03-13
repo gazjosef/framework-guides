@@ -1,23 +1,29 @@
 .hero {
+  border: 0.5px solid #000;
+  border-radius: 1rem;
+
   // * Vertical Line
   flex-direction: row;
 
   &:before {
     content: "";
-    border: 1px dotted #d3d3d3;
+    border: 1px dotted var(--clr-white-300);
     align-self: stretch;
   }
 
   &__item {
-    min-height: 20rem;
+    min-height: 35rem;
+    width: 12rem;
+    padding: 2rem;
+    overflow: hidden;
+
     flex: 1;
+
+    color: var(--clr-white-0);
 
     &--start {
       order: -1;
     }
-
-    // &--end {
-    // }
   }
 
   @include respond(sm) {

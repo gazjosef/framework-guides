@@ -16,7 +16,7 @@ export const Layout = ({ children }) => {
 
       {router.pathname === "/"}
 
-      <main>{children}</main>
+      <main className="u-min-h-screen">{children}</main>
 
       <Footer />
     </>

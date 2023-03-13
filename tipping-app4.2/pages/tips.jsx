@@ -1,10 +1,12 @@
+import Fixtures from "../components/Section/Fixtures";
+
 const tips = () => {
   return (
-    <div className="tips">
-      <div className="container">
-        <h1>TIps</h1>
+    <article className="tips">
+      <div className="container | u-mx-auto u-py-2">
+        <Fixtures />
       </div>
-    </div>
+    </article>
   );
 };
 
