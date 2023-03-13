@@ -3,13 +3,10 @@ import Tip from "../UI/Tip";
 import nrlData from "../../public/data/nrl2022.json";
 
 const Fixtures = () => {
-  const [fixtures, setFixtures] = useState(nrlData);
+  const fixtures = nrlData;
   const [currentRound, setCurrentRound] = useState("Round 1");
   const [text, setText] = useState([]);
 
-  // useEffect(() => {
-  //   setFixtures(nrlData);
-  // }, []);
   ////////////////////////////////////////
   // * Filter Fixtures
   ////////////////////////////////////////
@@ -57,7 +54,7 @@ const Fixtures = () => {
   return (
     <section>
       <div className="u-ml-3xl u-mb-2 | u-flex">
-        <h3>Select Round:</h3>
+        <h3 className="u-mr-1">Select Round:</h3>
         <select
           className="form__control"
           id="selectedRound"
@@ -79,13 +76,12 @@ const Fixtures = () => {
           return (
             <Tip
               fixture={fixture}
-              // selectTeam={selectTeam}
               key={index}
+              // selectTeam={selectTeam}
             />
           );
         })}
 
-      <Tip />
       <button className="btn | u-ml-3xl">Submit</button>
     </section>
   );
