@@ -13,8 +13,8 @@ $fs-button: var(--fs-300);
 body {
   color: var(--clr-black-900);
   font-family: $ff-primary;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: $default-font-size;
+  font-weight: var(--fw-regular);
   line-height: 1.7;
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 .secondary-heading {
-  color: var(--clr-neutral-400);
+  color: var(--clr-primary-400);
   font-family: $ff-secondary;
   font-size: $fs-secondary-heading;
   font-weight: var(--fw-semi-bold);

@@ -2,7 +2,7 @@ const Register = () => {
   return (
     <form action="" className="form">
       <div className="form__group">
-        <h2>Login</h2>
+        <h2 className="secondary-heading">Login</h2>
       </div>
       <div className="form__group">
         <input

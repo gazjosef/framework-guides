@@ -3,7 +3,7 @@ const Login = () => {
     <form action="" className="form">
       <div>
         <div className="form__group">
-          <h2 className="u-mb-2 u-uppercase">Login</h2>
+          <h2 className="secondary-heading | u-mb-2 u-uppercase">Login</h2>
         </div>
         <div className="form__group">
           <input
@@ -35,7 +35,10 @@ const Login = () => {
       <div>
         <div className="form__group">
           <p>
-            Don&rsquo;t have an account? <a href="">Sign Up here.</a>
+            Don&rsquo;t have an account?{" "}
+            <a href="" className="u-clr-primary-200">
+              Sign Up here.
+            </a>
           </p>
         </div>
 

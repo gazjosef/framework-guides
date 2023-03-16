@@ -2,6 +2,7 @@
   background-color: transparent;
   width: 100%;
 
+  border: 1px solid #dee2e6;
   border-collapse: collapse !important;
   border-spacing: 0;
 
@@ -26,10 +27,12 @@
 
   td,
   th {
-    background-color: $color-white !important;
+    background-color: var(--clr-white-0) !important;
     padding: 0.75rem;
     vertical-align: middle;
     border-top: 1px solid #dee2e6;
+
+    text-align: center;
   }
 
   tr {

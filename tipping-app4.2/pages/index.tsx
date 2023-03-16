@@ -16,7 +16,7 @@ export default function Home() {
       <main>
         <section className="section">
           <div className="container | u-px-5 u-py-5">
-            <div className="hero | u-bg-neutral-500 u-mx-auto | u-flex u-items-center u-justify-between u-gap-2">
+            <div className="hero | u-bg-white-300 u-mx-auto | u-flex u-items-center u-justify-between u-gap-2">
               <div className="hero__item hero__item--start |  | u-flex  u-justify-center">
                 <Login />
                 {/* <Register /> */}
