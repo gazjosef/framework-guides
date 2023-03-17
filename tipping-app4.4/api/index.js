@@ -3,16 +3,18 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 
 const app = express();
-// dotenv.config();
+dotenv.config();
 
-// const connect = async () => {
-//   try {
-//     await mongoose.connect(process.env.MONGO);
-//     console.log("Connected to mongoDB");
-//   } catch (error) {
-//     throw error;
-//   }
-// };
+console.log("MONGO", process.env.MONGO);
+
+const connect = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO);
+    console.log("Connected to MongoDB");
+  } catch (error) {
+    throw error;
+  }
+};
 
 // mongoose.connection.on("disconnected", () => {
 //   console.log("MongoDB disconnected");
@@ -23,6 +25,6 @@ const app = express();
 // });
 
 app.listen(8811, () => {
-  //   connect();
-  console.log("Connected");
+  connect();
+  console.log("Connected to Backend");
 });
