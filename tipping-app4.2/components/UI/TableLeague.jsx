@@ -90,7 +90,7 @@ const TableLeague = () => {
   return (
     <section>
       <h2 className="secondary-heading | u-mb-1">League Table</h2>
-      <table className="table table__striped | u-w-2-5">
+      <table className="table table__striped">
         <thead>
           <tr>
             <th scope="col"></th>

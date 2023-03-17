@@ -1,6 +1,6 @@
 .btn {
   cursor: pointer;
-  border: 1px solid rgba(var(--clr-black-1000), 0.1);
+  border: 1px solid rgba(black, 0.1);
   border-radius: 0.5rem;
   padding: 1rem 3rem;
 
@@ -12,11 +12,6 @@
   font-weight: var(--fw-bold);
   text-align: center;
   appearance: button;
-
-  &--cta {
-    background-color: darkred;
-    color: white;
-  }
 }
 
 .btn-moving-gradient {
