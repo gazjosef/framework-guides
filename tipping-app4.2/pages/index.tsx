@@ -24,13 +24,11 @@ export default function Home() {
               </div>
               <div className="hero__item hero__item--end | u-flex u-flex-col  u-justify-center">
                 <div className="form__group">
-                  <p>Enter with guest account</p>
+                  <p>Enter with guest account?</p>
                 </div>
                 <div className="form__group">
-                  <Link href="/table">
-                    <button className="btn | u-bg-secondary-200 | u-clr-white-0">
-                      Guest
-                    </button>
+                  <Link href="/dashboard">
+                    <button className="btn | u-bg-secondary-200">Guest</button>
                   </Link>
                 </div>
               </div>

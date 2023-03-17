@@ -43,7 +43,7 @@ const Login = () => {
         </div>
 
         <div className="form__group">
-          <button type="submit" className="btn btn-block">
+          <button type="submit" className="btn btn-block | u-bg-primary-400">
             Enter
           </button>
         </div>

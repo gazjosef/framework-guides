@@ -109,7 +109,7 @@ const TableLeague = () => {
             return (
               <tr key={index}>
                 <th scope="row">{index + 1}</th>
-                <td className="table__logo">
+                <td>
                   <Image
                     src={iconConverter[team.name]}
                     alt={team.name}

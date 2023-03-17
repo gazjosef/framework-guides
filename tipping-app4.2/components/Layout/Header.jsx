@@ -14,8 +14,8 @@ const Header = () => {
         </div>
         <ul role="list" className="u-flex u-items-center">
           <li>
-            <Link href="/table" className="u-clr-white-0">
-              Table
+            <Link href="/dashboard" className="u-clr-white-0">
+              Dashboard
             </Link>
           </li>
           <li>
@@ -25,7 +25,7 @@ const Header = () => {
           </li>
           <li>
             <Link href="/">
-              <button className="btn | u-flex u-items-center u-justify-between">
+              <button className="btn | u-bg-primary-200 | u-flex u-items-center u-justify-between">
                 <FaSignOutAlt />
                 <h3 className="u-ml-0-5">Logout</h3>
               </button>

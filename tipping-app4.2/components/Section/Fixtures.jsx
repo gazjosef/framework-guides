@@ -81,8 +81,11 @@ const Fixtures = () => {
             />
           );
         })}
-
-      <button className="btn | u-ml-3xl">Submit</button>
+      <div className="u-w-full">
+        <button className="btn | u-bg-secondary-200 u-ml-auto u-mr-3xl | u-clr-white-0">
+          Submit
+        </button>
+      </div>
     </section>
   );
 };

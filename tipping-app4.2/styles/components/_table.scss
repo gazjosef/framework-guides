@@ -1,33 +1,29 @@
 .table {
-  background-color: transparent;
+  background-color: var(--clr-white-0);
   width: 100%;
 
   border: 1px solid #dee2e6;
   border-collapse: collapse !important;
   border-spacing: 0;
 
-  &__logo {
-    img {
-      max-width: 6rem;
-      max-height: 4.5rem;
-    }
-  }
-
   thead {
-    display: table-header-group;
-    vertical-align: middle;
     border-color: inherit;
 
+    display: table-header-group;
+    vertical-align: middle;
+
     th {
-      vertical-align: bottom;
+      background-color: var(--clr-primary-400);
       border-bottom: 2px solid #dee2e6;
       min-width: 4.6rem;
+      vertical-align: bottom;
+
+      color: var(--clr-white-0);
     }
   }
 
   td,
   th {
-    background-color: var(--clr-white-0) !important;
     padding: 0.75rem;
     vertical-align: middle;
     border-top: 1px solid #dee2e6;
@@ -45,12 +41,12 @@
     tbody {
       tr:nth-of-type(odd) {
         background-color: rgba(0, 0, 0, 0.05);
-        background-color: red;
+        background-color: var(--clr-primary-50);
       }
     }
     tr:nth-of-type(odd) {
       background-color: rgba(0, 0, 0, 0.05);
-      background-color: red;
+      background-color: var(--clr-primary-50);
     }
   }
 }
