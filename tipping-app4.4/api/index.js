@@ -1,6 +1,10 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+// ROUTES
+import authRoutes from "./routes/auth.js";
+import usersRoutes from "./routes/users.js";
+import tipsRoutes from "./routes/tips.js";
 
 const app = express();
 dotenv.config();
@@ -18,13 +22,11 @@ mongoose.connection.on("disconnected", () => {
   console.log("MongoDB disconnected ❌");
 });
 
-mongoose.connection.on("connected", () => {
-  console.log("MongoDB connected ✅");
-});
+// MIDDLEWARE
 
-app.get("/", (req, res) => {
-  res.send("hello first request");
-});
+app.use("/api/auth", authRoutes);
+app.use("/api/users", usersRoutes);
+app.use("/api/tips", tipsRoutes);
 
 app.listen(8811, () => {
   connect();
