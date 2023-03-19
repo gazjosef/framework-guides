@@ -5,8 +5,6 @@ import mongoose from "mongoose";
 const app = express();
 dotenv.config();
 
-console.log("MONGO", process.env.MONGO);
-
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGO);
@@ -16,13 +14,17 @@ const connect = async () => {
   }
 };
 
-// mongoose.connection.on("disconnected", () => {
-//   console.log("MongoDB disconnected");
-// });
+mongoose.connection.on("disconnected", () => {
+  console.log("MongoDB disconnected ❌");
+});
 
-// mongoose.connection.on("connected", () => {
-//   console.log("MongoDB connected");
-// });
+mongoose.connection.on("connected", () => {
+  console.log("MongoDB connected ✅");
+});
+
+app.get("/", (req, res) => {
+  res.send("hello first request");
+});
 
 app.listen(8811, () => {
   connect();

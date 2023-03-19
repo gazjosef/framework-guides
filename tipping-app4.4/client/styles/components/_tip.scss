@@ -1,8 +1,9 @@
 .tip {
   height: 7rem;
   width: 50vw;
-  border: 2.5px solid var(--clr-neutral-400);
+  border: 1px solid var(--clr-neutral-400);
   border-radius: 0.5rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.05);
 
   &__home,
   &__away {
