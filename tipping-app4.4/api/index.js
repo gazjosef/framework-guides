@@ -23,6 +23,7 @@ mongoose.connection.on("disconnected", () => {
 });
 
 // MIDDLEWARE
+app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", usersRoutes);
