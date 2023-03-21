@@ -34,6 +34,33 @@ router.put("/:id", async (req, res) => {
 });
 
 // DELETE
+router.delete("/:id", async (req, res) => {
+  try {
+    await Tip.findByIdAndDelete(req.params.id);
+    res.status(200).json("Tip has been deleted");
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
 // GET
+router.get("/:id", async (req, res) => {
+  try {
+    const tip = await Tip.find(req.params.id);
+    res.status(200).json(tip);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+// GET ALL
+router.get("/", async (req, res) => {
+  try {
+    const tips = await Tip.find(req.params.id);
+    res.status(200).json(tips);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
 
 export default router;
