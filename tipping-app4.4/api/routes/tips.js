@@ -1,5 +1,6 @@
 import express from "express";
 import Tip from "../models/Tip.js";
+import { createError } from "../utils/error.js";
 
 const router = express.Router();
 
@@ -54,12 +55,12 @@ router.get("/:id", async (req, res) => {
 });
 
 // GET ALL
-router.get("/", async (req, res) => {
+router.get("/", async (req, res, next) => {
   try {
-    const tips = await Tip.find(req.params.id);
+    const tips = await Tip.find();
     res.status(200).json(tips);
   } catch (error) {
-    res.status(500).json(error);
+    next(error);
   }
 });
 
