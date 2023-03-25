@@ -3,6 +3,8 @@ import fixtureData from "../../public/data/nrl2019.json";
 import { iconConverter } from "./Converter";
 
 const TableLeague = () => {
+  // GET ALL FIXTURES
+
   let leagueTable = [];
 
   const createLeagueTable = () => {
@@ -89,7 +91,6 @@ const TableLeague = () => {
 
   return (
     <section>
-      <h2 className="secondary-heading | u-mb-1">League</h2>
       <table className="table table__striped">
         <thead>
           <tr>

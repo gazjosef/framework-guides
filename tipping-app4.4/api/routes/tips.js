@@ -6,19 +6,18 @@ import {
   getTip,
   updateTip,
 } from "../controllers/tip.js";
-
-import { createError } from "../utils/error.js";
+import { verifyAdmin } from "../utils/verifyToken.js";
 
 const router = express.Router();
 
 // CREATE
-router.post("/", createTip);
+router.post("/", verifyAdmin, createTip);
 
 // UPDATE
-router.put("/:id", updateTip);
+router.put("/:id", verifyAdmin, updateTip);
 
 // DELETE
-router.delete("/:id", deleteTip);
+router.delete("/:id", verifyAdmin, deleteTip);
 
 // GET
 router.get("/:id", getTip);

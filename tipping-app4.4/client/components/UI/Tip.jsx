@@ -7,7 +7,7 @@ const Tip = ({ fixture, selectTeam }) => {
   };
 
   return (
-    <div className="tip | u-bg-white-100 u-mb-1 u-mx-auto | u-flex u-items-center u-justify-between">
+    <div className="tip | u-bg-white-0 u-mb-1 u-mx-auto | u-flex u-items-center u-justify-between">
       <div className="tip__home">
         <div>
           <input

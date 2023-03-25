@@ -27,7 +27,7 @@ export default function Home() {
                   <p>Enter with guest account?</p>
                 </div>
                 <div className="form__group">
-                  <Link href="/dashboard">
+                  <Link href="/tips">
                     <button className="btn | u-bg-secondary-200 | u-clr-white-0">
                       Guest
                     </button>

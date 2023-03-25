@@ -2,15 +2,13 @@ import mongoose from "mongoose";
 
 const TipSchema = new mongoose.Schema(
   {
-    gameId: {
+    fixtureId: {
       type: Number,
       required: true,
-      unique: true,
     },
-    tipId: {
+    userId: {
       type: Number,
       required: true,
-      unique: true,
     },
     tip: {
       type: String,

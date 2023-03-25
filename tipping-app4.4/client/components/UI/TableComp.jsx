@@ -1,8 +1,15 @@
 import Image from "next/image";
 import React from "react";
 import { iconConverter } from "./Converter";
+import useFetch from "../../hooks/useFetch";
 
 const TableComp = () => {
+  // GET ALL TIPS
+
+  // FIND BY USER
+
+  // IF CORRECT TIP === PLAYER TIP ? +1 : 0
+
   const compMembers = [
     {
       team: "Knights",
@@ -49,17 +56,45 @@ const TableComp = () => {
     },
   ];
 
+  function getFirstName(fullName) {
+    const nameArr = fullName.split(" ");
+
+    return nameArr[0];
+  }
+
   return (
-    <section>
-      <h2 className="secondary-heading | u-mb-1">Comp Table</h2>
-      <table className="table table__striped |">
+    <section style={{ overflowX: "auto" }}>
+      <table className="table table__striped">
         <thead>
           <tr>
             <th scope="col"></th>
             <th scope="col">Name</th>
             <th scope="col">Team</th>
             <th scope="col">W</th>
-            <th scope="col">P</th>
+            <th scope="col">1</th>
+            <th scope="col">2</th>
+            <th scope="col">3</th>
+            <th scope="col">4</th>
+            <th scope="col">5</th>
+            <th scope="col">6</th>
+            <th scope="col">7</th>
+            <th scope="col">8</th>
+            <th scope="col">9</th>
+            <th scope="col">10</th>
+            <th scope="col">11</th>
+            <th scope="col">12</th>
+            <th scope="col">13</th>
+            <th scope="col">14</th>
+            <th scope="col">15</th>
+            <th scope="col">16</th>
+            <th scope="col">17</th>
+            <th scope="col">18</th>
+            <th scope="col">19</th>
+            <th scope="col">20</th>
+            <th scope="col">21</th>
+            <th scope="col">22</th>
+            <th scope="col">23</th>
+            <th scope="col">24</th>
             <th scope="col">Pts</th>
           </tr>
         </thead>
@@ -68,7 +103,7 @@ const TableComp = () => {
             return (
               <tr key={index}>
                 <th scope="row">{index + 1}</th>
-                <td>{member.name}</td>
+                <td>{getFirstName(member.name)}</td>
                 <td>
                   <Image
                     src={iconConverter[member.team]}
@@ -79,6 +114,30 @@ const TableComp = () => {
                 </td>
                 <td>{member.wins}</td>
                 <td>{member.perfect}</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+
                 <td>{member.wins + member.perfect}</td>
               </tr>
             );

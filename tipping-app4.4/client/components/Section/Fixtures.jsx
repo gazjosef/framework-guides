@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Tip from "../UI/Tip";
 import nrlData from "../../public/data/nrl2022.json";
 
 const Fixtures = () => {
+  // GET ALL FIXTURES
+
   const fixtures = nrlData;
+
   const [currentRound, setCurrentRound] = useState("Round 1");
   const [text, setText] = useState([]);
 
@@ -58,7 +61,7 @@ const Fixtures = () => {
         <select
           className="form__control"
           id="selectedRound"
-          onChange={selectedRound}
+          // onChange={selectedRound}
         >
           {rounds.map((round, index) => (
             <option

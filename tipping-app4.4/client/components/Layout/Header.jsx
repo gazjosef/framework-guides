@@ -16,13 +16,18 @@ const Header = () => {
         </Link>
         <ul role="list" className="u-flex u-items-center">
           <li>
-            <Link href="/dashboard" className="u-clr-white-0">
-              Dashboard
+            <Link href="/tips" className="u-mx-1 | u-clr-white-0">
+              Tips
             </Link>
           </li>
           <li>
-            <Link href="/tips" className="u-mx-2 | u-clr-white-0">
-              Tips
+            <Link href="/comp" className="u-mx-1 | u-clr-white-0">
+              Comp
+            </Link>
+          </li>
+          <li>
+            <Link href="/league" className="u-mx-1 | u-clr-white-0">
+              League
             </Link>
           </li>
           <li>
