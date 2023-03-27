@@ -7,11 +7,9 @@ const Register = () => {
       <div className="form__group">
         <input
           type="email"
-          className="form__control"
-          id="email"
-          name="email"
-          // value={email}
           placeholder="Enter your email"
+          id="email"
+          className="form__control"
           // onChange={onChange}
           autoComplete="on"
         />
@@ -20,11 +18,9 @@ const Register = () => {
       <div className="form__group">
         <input
           type="password"
-          className="form__control"
-          id="password"
-          name="password"
-          // value={password}
           placeholder="Enter password"
+          id="password"
+          className="form__control"
           // onChange={onChange}
           autoComplete="on"
         />

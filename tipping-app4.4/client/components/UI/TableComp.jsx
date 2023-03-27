@@ -70,7 +70,6 @@ const TableComp = () => {
             <th scope="col"></th>
             <th scope="col">Name</th>
             <th scope="col">Team</th>
-            <th scope="col">W</th>
             <th scope="col">1</th>
             <th scope="col">2</th>
             <th scope="col">3</th>
@@ -112,8 +111,7 @@ const TableComp = () => {
                     width={32}
                   />
                 </td>
-                <td>{member.wins}</td>
-                <td>{member.perfect}</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>

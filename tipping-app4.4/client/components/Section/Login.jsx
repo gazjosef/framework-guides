@@ -1,4 +1,35 @@
+import { AuthContext } from "@/context/AuthContext";
+import axios from "axios";
+import { useContext, useState } from "react";
+
 const Login = () => {
+  const [credentials, setCredentials] = useState({
+    username: undefined,
+    password: undefined,
+  });
+
+  const { user, loading, error, dispatch } = useContext(AuthContext);
+
+  const handleChange = (e) => {
+    setCredentials((prev) => ({
+      ...prev,
+      [e.target.id]: e.target.value,
+    }));
+  };
+
+  const handleClick = async (e) => {
+    e.preventDefault();
+    dispatch({ type: "LOGIN_START" });
+    try {
+      const res = await axios.post("/auth/login", credentials);
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+    } catch (error) {
+      dispatch({ type: "LOGIN_FAILURE", payload: error.response.data });
+    }
+  };
+
+  console.log("user", user);
+
   return (
     <form action="" className="form">
       <div>
@@ -7,13 +38,11 @@ const Login = () => {
         </div>
         <div className="form__group">
           <input
-            type="email"
+            type="text"
+            placeholder="Enter your username"
+            onChange={handleChange}
+            id="username"
             className="form__control"
-            id="email"
-            name="email"
-            // value={email}
-            placeholder="Enter your email"
-            // onChange={onChange}
             autoComplete="on"
           />
         </div>
@@ -21,12 +50,10 @@ const Login = () => {
         <div className="form__group">
           <input
             type="password"
-            className="form__control"
-            id="password"
-            name="password"
-            // value={password}
             placeholder="Enter password"
-            // onChange={onChange}
+            onChange={handleChange}
+            id="password"
+            className="form__control"
             autoComplete="on"
           />
         </div>
@@ -41,15 +68,16 @@ const Login = () => {
             </a>
           </p>
         </div>
-
         <div className="form__group">
           <button
             type="submit"
+            onClick={handleClick}
             className="btn btn-block | u-bg-primary-400 | u-clr-white-0"
           >
             Enter
           </button>
         </div>
+        {error && <span>{error.message}</span>}
       </div>
     </form>
   );

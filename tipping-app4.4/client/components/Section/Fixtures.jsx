@@ -11,11 +11,11 @@ const Fixtures = () => {
   const [text, setText] = useState([]);
 
   ////////////////////////////////////////
-  // * Filter Fixtures
+  // * Filter Fixtures By Round
   ////////////////////////////////////////
 
   const filterFixtures = () => {
-    return fixtures.filter((fixture, index) => {
+    return fixtures.filter((fixture) => {
       return fixture.round === currentRound;
     });
   };
@@ -56,17 +56,17 @@ const Fixtures = () => {
 
   return (
     <section>
-      <div className="u-ml-3xl u-mb-2 | u-flex">
+      <div className="select-box | u-mb-2 u-mx-auto | u-flex">
         <h3 className="u-mr-1">Select Round:</h3>
         <select
           className="form__control"
           id="selectedRound"
-          // onChange={selectedRound}
+          onChange={selectedRound}
         >
           {rounds.map((round, index) => (
             <option
               key={index}
-              // className={selectedRound === round ? "selected" : ""}
+              className={selectedRound === round ? "selected" : ""}
             >
               {round}
             </option>
@@ -84,8 +84,8 @@ const Fixtures = () => {
             />
           );
         })}
-      <div className="u-w-full">
-        <button className="btn | u-bg-secondary-200 u-ml-auto u-mr-3xl | u-clr-white-0">
+      <div className="select-box | u-mx-auto">
+        <button className="btn | u-bg-secondary-200 u-ml-auto | u-clr-white-0">
           Submit
         </button>
       </div>
