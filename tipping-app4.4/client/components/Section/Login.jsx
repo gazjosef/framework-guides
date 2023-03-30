@@ -19,6 +19,7 @@ const Login = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
+    console.log("click");
     dispatch({ type: "LOGIN_START" });
     try {
       const res = await axios.post("/auth/login", credentials);
@@ -28,7 +29,8 @@ const Login = () => {
     }
   };
 
-  console.log("user", user);
+  console.log("User", user);
+  console.log("TEST");
 
   return (
     <form action="" className="form">

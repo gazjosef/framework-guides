@@ -1,8 +1,5 @@
 import { createContext, useEffect, useReducer } from "react";
 
-// TODO : FIX localStorage BUG
-//
-
 const INITIAL_STATE = {
   user:
     (typeof window !== "undefined" &&
