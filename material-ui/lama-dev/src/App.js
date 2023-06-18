@@ -34,6 +34,13 @@ function App() {
           backgroundColor: "skyblue",
           color: "#888",
           margin: 5,
+          "&:hover": {
+            backgroundColor: "lightblue",
+          },
+          "&:disabled": {
+            backgroundColor: "gray",
+            color: "white",
+          },
         }}
       >
         My Unique Button
