@@ -3,8 +3,8 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import AddIcon from "@mui/icons-material/Add";
 
 function App() {
-  const BlueButton = styled(Button)(({ theme }) => ({
-    backgroundColor: theme.palette.otherColor.main,
+  const BlueButton = styled(Button)((theme) => ({
+    backgroundColor: "skyblue",
     color: "#888",
     margin: 5,
     "&:hover": {
@@ -22,7 +22,7 @@ function App() {
       <Button
         startIcon={<SettingsIcon />}
         variant="contained"
-        color="otherColor"
+        // color="otherColor"
         size="small"
       >
         Settings
