@@ -5,14 +5,18 @@ import Who from "./components/Who";
 import Works from "./components/Works";
 
 const Container = styled.div`
+  background: url("./img/bg.jpeg");
   height: 100vh;
+  overflow-y: auto;
+
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  overflow-y: auto;
   scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;
   }
+
+  color: white;
 `;
 
 function App() {
