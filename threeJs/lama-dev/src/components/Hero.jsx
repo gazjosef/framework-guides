@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Navbar from "./Navbar";
 
 const Section = styled.div`
   height: 100vh;
@@ -6,6 +7,10 @@ const Section = styled.div`
 `;
 
 const Hero = () => {
-  return <Section>Hero</Section>;
+  return (
+    <Section>
+      <Navbar />
+    </Section>
+  );
 };
 export default Hero;
