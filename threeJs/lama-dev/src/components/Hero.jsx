@@ -66,10 +66,15 @@ const Img = styled.img`
 
   object-fit: contain;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
+
+  animation: animate 2s infinite ease alternate;
+
+  @keyframes animate {
+    to {
+      transform: translateY(20px);
+    }
+  }
 `;
 
 const Hero = () => {
