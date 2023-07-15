@@ -29,10 +29,30 @@ const List = styled.ul`
   list-style: none;
 `;
 
-const ListItem = styled.li``;
-const Icons = styled.div``;
-const Icon = styled.img``;
-const Button = styled.button``;
+const ListItem = styled.li`
+  cursor: pointer;
+`;
+
+const Icons = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 50px;
+`;
+
+const Icon = styled.img`
+  cursor: pointer;
+  width: 20px;
+`;
+
+const Button = styled.button`
+  width: 100px;
+  padding: 10px;
+  background-color: #da4ea2;
+  border: none;
+  border-radius: 5px;
+
+  color: white;
+`;
 
 const Navbar = () => {
   return (
