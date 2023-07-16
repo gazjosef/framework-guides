@@ -37,9 +37,35 @@ const List = styled.ul`
 const ListItem = styled.li`
   cursor: pointer;
   color: transparent;
-  font-size: 100px;
+  font-size: 90px;
   font-weight: bold;
   -webkit-text-stroke: 1px white;
+
+  position: relative;
+
+  &::after {
+    content: "${(props) => props.text}";
+    color: pink;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &:hover {
+    &::after {
+      animation: moveText 0.5s linear both;
+
+      @keyframes moveText {
+        to {
+          width: 100%;
+        }
+      }
+    }
+  }
 `;
 
 const Right = styled.div`
@@ -53,7 +79,9 @@ const Works = () => {
         <Left>
           <List>
             {data.map((item) => (
-              <ListItem key={item}>{item}</ListItem>
+              <ListItem key={item} text={item}>
+                {item}
+              </ListItem>
             ))}
           </List>
         </Left>
