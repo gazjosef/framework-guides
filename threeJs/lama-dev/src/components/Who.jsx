@@ -61,10 +61,7 @@ const Who = () => {
   return (
     <Section>
       <Container>
-        <Left>
-          {/* 3d model */}
-          <Img src="./img/moon.png" />
-        </Left>
+        <Left>{/* 3d model */}</Left>
         <Right>
           <Title>Think outside the square space</Title>
           <WhatWeDo>
