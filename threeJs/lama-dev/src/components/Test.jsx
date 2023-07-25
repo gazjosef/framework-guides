@@ -13,8 +13,10 @@ const Test = () => {
     <Container>
       <Canvas>
         <OrbitControls enableZoom={false} />
+        <ambientLight intensity={1} />
         <mesh>
           <boxGeometry args={[1, 1, 1]} />
+          <meshStandardMaterial color="red" />
         </mesh>
       </Canvas>
     </Container>
