@@ -128,6 +128,15 @@ const energySourceData = {
 // * JAVASCRIPT
 // ****************
 
+const stepOneContainer = document.getElementById("step-one-container");
+const stepTwoContainer = document.getElementById("step-two-container");
+const stepThreeContainer = document.getElementById("step-three-container");
+let stepOneValue = "";
+let stepTwoValue = "";
+let stepThreeValue = "";
+let stepTwoData = energySourceData[stepOneValue].subCategories;
+let stepThreeData = energySourceData[stepOneValue].subCategories;
+
 const energySourceContainer = document.getElementById("energySourceContainer");
 const subCategoryContainer = document.querySelector(".sub-category-container");
 const selectSizeContainer = document.querySelector(".select-size-container");
@@ -142,6 +151,11 @@ if (panels.length > 0) {
 for (const source in energySourceData) {
   const sourceData = energySourceData[source];
   createOption(source, sourceData, energySourceContainer);
+}
+
+
+for (const subCategory in stepTwoData) {
+  createOption(subCategory, stepTwoData, stepTwoContainer);
 }
 
 const energySourceOptions = energySourceContainer.querySelectorAll(".options");
